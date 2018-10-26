@@ -367,7 +367,8 @@ svg:hover {
 .last-image h2 {
     position: relative;
     text-align: center;
-    margin-top: 30vh;
+    margin-top: 35vh;
+    transform: translateY(-50%);
     color: #FFFFFF;
     z-index: 2;
 }
@@ -755,7 +756,7 @@ svg:hover {
         width: 90vw;
     }
     .last-image h2 {
-        margin-top: 40vh;
+        margin-top: 50vh;
     }
     .image-div {
         background-attachment: scroll;
