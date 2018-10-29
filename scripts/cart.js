@@ -1,11 +1,11 @@
-var cart = {};
+cart = {};
 
 function loadCart() {
     if (sessionStorage.getItem('cart')) {
         cart = JSON.parse(sessionStorage.getItem('cart'));
         showCart();
     } else {
-        $('.main-cart').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/cart-empty.png" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" target="_blank" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
+        $('.main-cart').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/cart-empty.png" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
         $('.total').css({"display": "none"});
     }
 }
@@ -13,7 +13,7 @@ function loadCart() {
 function showCart() { 
     var num = 0;
     if (!isEmpty(cart)) {
-        $('.main-cart').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/cart-empty.png" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" target="_blank" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
+        $('.main-cart').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/cart-empty.png" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
         $('.total').css({"display": "none"});
     } else {
         $.getJSON('/goods.json', function(data) {
@@ -138,6 +138,7 @@ function sendEmail() {
                     if (data == 1) {
                         $('.thanks').css({"display": "block"});
                         $('.overlay').css({"display": "block"});
+                        sessionStorage.clear();
                     } else {
                         $('.alert-div').css({"display": "block"});
                         $('.retry').css({"display": "block"});
