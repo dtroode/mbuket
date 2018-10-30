@@ -2,12 +2,12 @@
 @font-face{
 	font-family:"Neue Haas Grotesk Text Bd";
 	font-weight:700;
-	src:url("../fonts/NeueHaasGroteskText75Bold.woff?#iefix");
+	src:url("/fonts/NeueHaasGroteskText75Bold.woff?#iefix");
 }
 @font-face{
 	font-family:"Helvetica";
 	font-weight:700;
-	src:url("../fonts/HelveticaBold.woff#iefix");
+	src:url("/fonts/HelveticaBold.woff#iefix");
 }
 
 :root {
@@ -16,6 +16,7 @@
     --pink: #FFCFCC;
 }
 * {
+    word-wrap: break-word;
     -webkit-transition: all ease-in 0.2s;
     -moz-transition: all ease-in 0.2s;
     -ms-transition: all ease-in 0.2s;
@@ -89,6 +90,52 @@ svg {
 svg:hover {
     fill: var(--red);
 }
+.cookie {
+    display: none;
+    background: var(--gray);
+    box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
+    padding: 25px;
+    color: #FFFFFF;
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    width: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.cookie p:first-child {
+    font-size: 150%;
+    margin-bottom: 10px;
+}
+.cookie .emoji {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+.cookie a {
+    font-size: 100%;
+    color: #FFFFFF;
+    border-bottom: 4px solid #FFFFFF;
+}
+.cookie a:hover {
+    text-decoration: none;
+    color: var(--red);
+    border-bottom: 4px solid var(--red);
+}
+.agree {
+    box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
+    background: var(--red);
+    border: 0;
+    height: 50px;
+    width: 150px;
+    font-size: 125%;
+    color: var(--gray);
+    line-height: 50px;
+}
+.agree:hover {
+    border-bottom: 50px solid var(--gray);
+    color: var(--red);
+}
 .next {
     width: 50px;
     height: 50px;
@@ -160,7 +207,7 @@ svg:hover {
     height: 50px;
     width: 200px;
     position: fixed;
-    bottom: -40px;
+    bottom: -50px;
     right: 40px;
     z-index: 100;
     box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
@@ -209,10 +256,13 @@ svg:hover {
     color: var(--gray);
 }
 .id1 {
-    background: url(../images/flower1.jpg);
+    background: url(/images/flower1.jpg);
+}
+.id1-cookie {
+    background: url(/images/cookie.jpg);
 }
 .id2 {
-    background: url(../images/flower2.jpg);
+    background: url(/images/flower2.jpg);
 }
 .image-div {
     background-attachment: fixed;
@@ -230,6 +280,10 @@ svg:hover {
     left: 20vw;
     z-index: 2;
     color: var(--gray);
+}
+.main-cookie {
+    background: #FFFFFF;
+    color: var(--pink);
 }
 .main p {
     margin-top: 20px;
@@ -358,7 +412,7 @@ svg:hover {
     bottom: -45vh;
     left: 0;
     height: 70vh;
-    background: url(../images/wtc.jpg);
+    background: url(/images/wtc.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -382,7 +436,7 @@ svg:hover {
     opacity: 0.5;
 }
 .blur {
-    background: url(../images/wtcblur.jpg);
+    background: url(/images/wtcblur.jpg);
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -417,7 +471,6 @@ svg:hover {
     z-index: 2;
 }
 .back-to-main {
-    display: inline-block;
     background: var(--gray);
     color: var(--red);
     height: 50px;
@@ -737,7 +790,6 @@ svg:hover {
 }
 @media screen and (max-width: 992px) {
     * {
-        word-wrap: break-word;
         background-attachment: scroll;
     }
     html, body {
@@ -755,6 +807,13 @@ svg:hover {
     input {
         width: 90vw;
     }
+    .cookie {
+        top: unset;
+        bottom: 0;
+        left: 0;
+        transform: translateY(0);
+        width: unset;
+    }
     .last-image h2 {
         margin-top: 50vh;
     }
@@ -767,12 +826,15 @@ svg:hover {
         margin: 0;
         padding: 0 5vw 5vw 5vw;
         display: inline-block;
-        background: url(../images/flower1.jpg);
+        background: url(/images/flower1.jpg);
         background-size: cover;
         background-repeat: no-repeat;
     }
+    .main-cookie {
+        background: url(/images/cookie.jpg);
+    }
     .shop-main {
-        background: url(../images/shopcart.jpg);
+        background: url(/images/shopcart.jpg);
         background-attachment: scroll;
         background-size: cover;
         background-position: center center;
@@ -889,6 +951,7 @@ svg:hover {
         display: none;
     }
     .link-to-cart {
+        display: none;
         bottom: 5vw !important;
         right: 5vw;
         left: 5vw;

@@ -21,15 +21,16 @@ function goodsOut(data) {
 }
 
 function showLink() {
-    $('.link-to-cart').css({"opacity": "1", "bottom": "40px"});
-    setTimeout(changeTransition, 1000);
+    $('.link-to-cart').css({"display": "block", "bottom": "40px"});
+    setTimeout(function(){$('.link-to-cart').css({"opacity": "1"})}, 1000);
+    setTimeout(changeTransition, 1100);
 }
 
 function showLinkImmediately() {
     if (!isEmpty(cart)) {
     } else {
-        $('.link-to-cart').css({"opacity": "1", "bottom": "40px"});
-        setTimeout(changeTransition, 1000);
+        $('.link-to-cart').css({"display": "block", "opacity": "1", "bottom": "40px"});
+        setTimeout(changeTransition, 1100);
     }
 }
 
@@ -88,6 +89,39 @@ function getCookie(name) {
     return(setStr);
 }
 
+function showPolicyQuestion() {
+    var policy = getCookie('policy');
+    if (policy == 'yes') {
+        $('.cookie').css({
+            "display": "none"
+        })
+    } else {
+        $('.cookie').css({
+            "display": "block"
+        })
+    }
+}
+
+function closeCookie() {
+    var windowWidth = $("body").width();
+    if (windowWidth <= 992) {
+        $('.cookie').css({
+            "opacity": "0"
+        })
+    } else {
+        $('.cookie').css({
+            "right": "-200px",
+            "box-shadow": "none"
+        });
+    }
+    setTimeout(() => {
+        $('.cookie').css({
+            "display": "none"
+        })
+    }, 500);
+    setCookie('policy', 'yes', '/');
+}
+
 function imageClick(e) {
     var img = $(e);
     var src = img.attr('src');
@@ -124,5 +158,6 @@ function isEmpty(object) {
 $(document).ready(function () {
     init();
     loadCart();
+    showPolicyQuestion();
     showLinkImmediately();
 });
