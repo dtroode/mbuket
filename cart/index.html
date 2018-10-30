@@ -169,10 +169,10 @@
                                             if (msg.data == 'reload') window.location.reload();
                                             else if (msg.data == 'refreshcss') refreshCSS();
                                         };
-                                        if (sessionStorage && !sessionStorage.getItem(
+                                        if (localStorage && !localStorage.getItem(
                                                 'IsThisFirstTime_Log_From_LiveServer')) {
                                             console.log('Live reload enabled.');
-                                            sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                                            localStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
                                         }
                                     })();
                                 } else {
@@ -227,10 +227,10 @@
                                             if (msg.data == 'reload') window.location.reload();
                                             else if (msg.data == 'refreshcss') refreshCSS();
                                         };
-                                        if (sessionStorage && !sessionStorage.getItem(
+                                        if (localStorage && !localStorage.getItem(
                                                 'IsThisFirstTime_Log_From_LiveServer')) {
                                             console.log('Live reload enabled.');
-                                            sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                                            localStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
                                         }
                                     })();
                                 } else {

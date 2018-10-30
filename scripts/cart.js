@@ -1,13 +1,39 @@
 cart = {};
 
 function loadCart() {
-    if (sessionStorage.getItem('cart')) {
-        cart = JSON.parse(sessionStorage.getItem('cart'));
+    if (getCookie('cart')) {
+        cart = JSON.parse(getCookie('cart'));
         showCart();
     } else {
         $('.main-cart').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/cart-empty.png" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
         $('.total').css({"display": "none"});
+        getCookie('cart');
+        deleteCookie('cart');
     }
+}
+
+function getCookie(name) {
+    var cookie = ' ' + document.cookie;
+    var search = ' ' + name + '=';
+    var setStr = null;
+    var offset = 0;
+    var end = 0;
+    if (cookie.length > 0) {
+        offset = cookie.indexOf(search);
+        if (offset != -1) {
+            offset += search.length;
+            end = cookie.indexOf(';', offset)
+            if (end == -1) {
+                end = cookie.length;
+            }
+            setStr = unescape(cookie.substring(offset, end));
+        }
+    }
+    return(setStr);
+}
+
+function setCookie(name, value, path) {
+    document.cookie = name + '=' + escape(value) + ((path) ? "; path=" + path : "");
 }
 
 function showCart() { 
@@ -15,6 +41,7 @@ function showCart() {
     if (!isEmpty(cart)) {
         $('.main-cart').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/cart-empty.png" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
         $('.total').css({"display": "none"});
+        deleteCookie('cart');
     } else {
         $.getJSON('/goods.json', function(data) {
             var goods = data;
@@ -70,7 +97,14 @@ function minusGoods() {
 }
 
 function saveCart() {
-    sessionStorage.setItem('cart', JSON.stringify(cart));
+    deleteCookie('cart');
+    setCookie('cart', JSON.stringify(cart), '/');
+}
+
+function deleteCookie(name) {
+  var cookieDate = new Date();
+  cookieDate.setTime(cookieDate.getTime() - 1);
+  document.cookie = name += '=; expires=' + cookieDate.toGMTString();
 }
 
 function imageClick(e) {
@@ -138,7 +172,7 @@ function sendEmail() {
                     if (data == 1) {
                         $('.thanks').css({"display": "block"});
                         $('.overlay').css({"display": "block"});
-                        sessionStorage.clear();
+                        deleteCookie('cart');
                     } else {
                         $('.alert-div').css({"display": "block"});
                         $('.retry').css({"display": "block"});
