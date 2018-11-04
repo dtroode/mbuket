@@ -526,9 +526,6 @@ svg:hover {
     margin-top: 40px;
     line-height: 50px;
 }
-.send-email:hover {
-    border-bottom: 50px solid #FFFFFF;
-}
 .add-to-cart {
     margin: 0 0 30px 0;
     box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
@@ -548,8 +545,11 @@ svg:hover {
     position: relative;
 }
 .cart-func:hover {
-    border-bottom: 50px solid var(--gray);
-    color: var(--red);
+    box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56) !important;
+}
+.cart-func:active {
+    background: var(--pink);
+    outline: none;
 }
 .plus-goods, .minus-goods {
     width: 50px;
@@ -720,7 +720,7 @@ svg:hover {
     z-index: 20;
 }
 .popup_bg {
-	background: rgba(0,0,0,0.7);
+	background: rgba(0,0,0,0.5);
 	position: absolute;
 	z-index: 1;
 	height: 100%;
@@ -780,6 +780,17 @@ svg:hover {
 }
 .margin {
     margin-bottom: 40px;
+}
+.send-email {
+    box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
+    background: var(--gray);
+    border: none;
+    height: 50px;
+    width: 300px;
+    font-size: 150%;
+    color: var(--red);
+    margin-top: 40px;
+    line-height: 50px;
 }
 
 /* ------------MEDIA ADAPTATION------------ */
