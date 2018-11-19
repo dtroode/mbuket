@@ -11,7 +11,7 @@ function goodsOut(data) {
         description = '';
         name = '';
         out += '<div class="item">';
-        out += '<img src="/' + data[key].img + '" class="wow fadeInUp image" alt="' + data[key].description + '" onclick="imageClick(this)">';
+        out += '<img data-src="/' + data[key].img + '" class="wow fadeInUp image lazyload" alt="' + data[key].description + '" onclick="imageClick(this)">';
         out += '<p class="name wow fadeInUp">' + data[key].name + '</p>';
         out += '<button class="add-to-cart cart-func wow fadeInUp" onclick="showLink()" data-id="' + key + '">Добавить в корзину</button>';
         out += '</div>';
