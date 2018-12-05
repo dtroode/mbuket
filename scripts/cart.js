@@ -1,8 +1,10 @@
 cart = {};
+seasonCart = {};
 
 function loadCart() {
-    if (getCookie('cart')) {
+    if (getCookie('cart') || getCookie('seasonCart')) {
         cart = JSON.parse(getCookie('cart'));
+        seasonCart = JSON.parse(getCookie('seasonCart'));
         showCart();
     } else {
         $('.main-cart').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/cart-empty.png" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
@@ -38,11 +40,7 @@ function setCookie(name, value, path) {
 
 function showCart() { 
     var num = 0;
-    if (!isEmpty(cart)) {
-        $('.main-cart').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/cart-empty.png" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
-        $('.total').css({"display": "none"});
-        deleteCookie('cart');
-    } else {
+    if (isEmpty(cart) && isEmpty(seasonCart)) {
         $.getJSON('/goods.json', function(data) {
             var goods = data;
             var out = '';
@@ -67,6 +65,86 @@ function showCart() {
             $('.plus-goods').on('click', plusGoods);
             $('.minus-goods').on('click', minusGoods);
         });
+        $.getJSON('/seasongoods.json', function(data) {
+            var seasonGoods = data;
+            var out = '';
+            out +='<div class="big-div"><h1 class="biggy">НОВОГОДНЯЯ КОРЗИНА</h1></div><div class="zind"><h2>Новогодняя корзина</h2><img class="emoji emb" src="/images/cart.png" alt="😉"></div>'
+            for (var id in seasonCart) {
+                out +='<div class="item">';
+                out +='<img src="/'+seasonGoods[id].img+'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + seasonGoods[id].description + '">';
+                out +='<p class="name wow fadeInUp">'+seasonGoods[id].name+'</p>';
+                out +='<p class="cost">'+seasonCart[id] * seasonGoods[id].cost+ ' ₽'+'</p>';
+                out +='<div class="button-container wow fadeInUp">';
+                out +='<button data-id="'+id+'" class="del-season-goods remove-fr-cart cart-func">Удалить</button>';
+                out +='<button data-id="'+id+'" class="minus-season-goods remove-fr-cart cart-func">-</button>';
+                out +='<button data-id="'+id+'" class="plus-season-goods remove-fr-cart cart-func">+</button>';
+                out +='<p class="number">'+seasonCart[id]+'</p>';
+                out +='</div>';
+                out +='</div>';
+                num += seasonGoods[id].cost * seasonCart[id];
+                $('.total').html('<h2>Итого:</h2><img class="emoji emb" src="/images/slightly.png" alt="🙂"><p class="name pmb">' + num + ' рублей</p>');
+            }
+            $('.season-main-cart').html(out);
+            $('.del-season-goods').on('click', deleteSeasonGoods);
+            $('.plus-season-goods').on('click', plusSeasonGoods);
+            $('.minus-season-goods').on('click', minusSeasonGoods);
+        });
+    } else if (isEmpty(cart)) {
+        $.getJSON('/goods.json', function(data) {
+            var goods = data;
+            var out = '';
+            out +='<div class="big-div"><h1 class="biggy">КОРЗИНА</h1></div><div class="zind"><h2>Корзина</h2><img class="emoji emb" src="/images/cart.png" alt="😉"></div>'
+            for (var id in cart) {
+                out +='<div class="item">';
+                out +='<img src="/'+goods[id].img+'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + goods[id].description + '">';
+                out +='<p class="name wow fadeInUp">'+goods[id].name+'</p>';
+                out +='<p class="cost">'+cart[id] * goods[id].cost+ ' ₽'+'</p>';
+                out +='<div class="button-container wow fadeInUp">';
+                out +='<button data-id="'+id+'" class="del-goods remove-fr-cart cart-func">Удалить</button>';
+                out +='<button data-id="'+id+'" class="minus-goods remove-fr-cart cart-func">-</button>';
+                out +='<button data-id="'+id+'" class="plus-goods remove-fr-cart cart-func">+</button>';
+                out +='<p class="number">'+cart[id]+'</p>';
+                out +='</div>';
+                out +='</div>';
+                num += goods[id].cost * cart[id];
+                $('.total').html('<h2>Итого:</h2><img class="emoji emb" src="/images/slightly.png" alt="🙂"><p class="name pmb">' + num + ' рублей</p>');
+            }
+            $('.main-cart').html(out);
+            $('.del-goods').on('click', deleteGoods);
+            $('.plus-goods').on('click', plusGoods);
+            $('.minus-goods').on('click', minusGoods);
+            console.log(out);
+        });
+    } else if (isEmpty(seasonCart)) {
+        $.getJSON('/seasongoods.json', function(data) {
+            var seasonGoods = data;
+            var out = '';
+            out +='<div class="big-div"><h1 class="biggy">КОРЗИНА</h1></div><div class="zind"><h2>Корзина</h2><img class="emoji emb" src="/images/cart.png" alt="😉"></div>'
+            for (var id in seasonCart) {
+                out +='<div class="item">';
+                out +='<img src="/'+seasonGoods[id].img+'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + seasonGoods[id].description + '">';
+                out +='<p class="name wow fadeInUp">'+seasonGoods[id].name+'</p>';
+                out +='<p class="cost">'+seasonCart[id] * seasonGoods[id].cost+ ' ₽'+'</p>';
+                out +='<div class="button-container wow fadeInUp">';
+                out +='<button data-id="'+id+'" class="del-season-goods remove-fr-cart cart-func">Удалить</button>';
+                out +='<button data-id="'+id+'" class="minus-season-goods remove-fr-cart cart-func">-</button>';
+                out +='<button data-id="'+id+'" class="plus-season-goods remove-fr-cart cart-func">+</button>';
+                out +='<p class="number">'+seasonCart[id]+'</p>';
+                out +='</div>';
+                out +='</div>';
+                num += seasonGoods[id].cost * seasonCart[id];
+                $('.total').html('<h2>Итого:</h2><img class="emoji emb" src="/images/slightly.png" alt="🙂"><p class="name pmb">' + num + ' рублей</p>');
+            }
+            $('.season-main-cart').html(out);
+            $('.del-season-goods').on('click', deleteSeasonGoods);
+            $('.plus-season-goods').on('click', plusSeasonGoods);
+            $('.minus-season-goods').on('click', minusSeasonGoods);
+        });
+    } else {
+        $('.main-cart').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/cart-empty.png" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
+        $('.total').css({"display": "none"});
+        deleteCookie('cart');
+        deleteCookie('seasonCart');
     }
 }
 
@@ -96,9 +174,40 @@ function minusGoods() {
     showCart();
 }
 
+function deleteSeasonGoods() {
+    var id = $(this).attr('data-id');
+    delete seasonCart[id];
+    saveSeasonCart();
+    showCart();
+    $('.popup').css({"display": "none"});
+}
+
+function plusSeasonGoods() {
+    var id = $(this).attr('data-id');
+    seasonCart[id]++;
+    saveSeasonCart();
+    showCart();
+}
+
+function minusSeasonGoods() {
+    var id = $(this).attr('data-id');
+    if (seasonCart[id] == 1) {
+        delete seasonCart[id];
+    } else {
+        seasonCart[id]--;
+    }
+    saveSeasonCart();
+    showCart();
+}
+
 function saveCart() {
     deleteCookie('cart');
     setCookie('cart', JSON.stringify(cart), '/');
+}
+
+function saveSeasonCart() {
+    deleteCookie('seasonCart');
+    setCookie('seasonCart', JSON.stringify(seasonCart), '/');
 }
 
 function deleteCookie(name) {

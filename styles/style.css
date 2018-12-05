@@ -47,6 +47,7 @@ button {
 }
 h1 {
     font-size: 600%;
+    width: 500px;
 }
 h2 {
     font-size: 400%;
@@ -280,12 +281,18 @@ svg:hover {
     z-index: 2;
     color: var(--gray);
 }
+.main-main {
+    width: 750px;
+}
 .main-cookie {
     background: #FFFFFF;
     color: var(--pink);
 }
 .main p {
     margin-top: 20px;
+}
+.main-main p {
+    width: 500px;
 }
 .product {
     padding: 80px;
@@ -367,6 +374,26 @@ svg:hover {
     border: 20px solid var(--gray);
     width: 275px;
     height: 275px;
+}
+.newyear-items {
+    margin-bottom: 20px;
+}
+.newyear-items h2 {
+    width: 500px;
+}
+.newyear-items .square {
+    width: 200px;
+    height: 200px;
+    border: 15px solid var(--gray);
+    margin-top: 20px;
+    pointer-events: unset;
+    -webkit-user-select: unset;
+    -moz-user-select: unset;
+    user-select: unset;
+    cursor: pointer;
+}
+.newyear-items .square:hover {
+    border: 17.5px solid var(--gray);
 }
 .button {
     text-align: center;
@@ -525,7 +552,7 @@ svg:hover {
     margin-top: 40px;
     line-height: 50px;
 }
-.add-to-cart {
+.add-to-cart, .add-to-season-cart {
     margin: 0 0 30px 0;
     box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
 }
@@ -550,7 +577,7 @@ svg:hover {
     background: var(--pink);
     outline: none;
 }
-.plus-goods, .minus-goods {
+.plus-goods, .minus-goods, .plus-season-goods, .minus-season-goods {
     width: 50px;
 }
 .button-container {
@@ -791,11 +818,72 @@ svg:hover {
     margin-top: 40px;
     line-height: 50px;
 }
+.scroll-to-season {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+}
+.scroll-to-season:hover {
+    text-decoration: none;
+}
+.scroll-to-season p {
+    font-size: 50%;
+    margin: 0;
+    width: 200px;
+}
+/* NEW YEAR */
+.newyear {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    left: 0;
+    z-index: 100;
+    color: var(--red);
+    text-align: center;
+    background-image: url(/images/newyear.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.overlay-ny {
+    position: absolute;
+    background-color: var(--gray);
+    width: 100vw;
+    height: 100%;
+    opacity: 0.5;
+}
+.main-ny {
+    position: relative;
+    margin: 80px;
+    left: 0;
+    right: 0;
+}
+.main-ny button {
+    background: var(--red);
+    color: var(--gray);
+    height: 50px;
+    font-size: 125%;
+    border: none;
+    padding: 0 10px;
+    line-height: 50px;
+    position: relative;
+    box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
+    cursor: pointer;
+}
+.main-ny button:hover {
+    box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56);
+}
+.newyear p {
+    font-size: 150%;
+}
 
 /* ------------MEDIA ADAPTATION------------ */
 @media screen and (max-height: 1800px) {
     .full, .full-cont {
         min-height: 100vh;
+    }
+    .perv, .id1, .links {
+        min-height: 150vh;
     }
 }
 @media screen and (max-width: 992px) {
