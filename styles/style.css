@@ -940,7 +940,7 @@ svg:hover {
     }
     .main p {
         margin-top: 0;
-        width: unset;
+        width: 90vw;
     }
     .main h2 {
         width: unset;
