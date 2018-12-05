@@ -898,6 +898,7 @@ svg:hover {
         line-height: 10vh;
         margin: 40vh 0;
         text-align: center;
+        width: unset;
     }
     h2 {
         font-size: 250%;
@@ -939,6 +940,17 @@ svg:hover {
     }
     .main p {
         margin-top: 0;
+        width: unset;
+    }
+    .main h2 {
+        width: unset;
+    }
+    .main .square {
+        width: 90vw;
+        height: 90vw;
+    }
+    .newyear-items p {
+        font-size: 100%;
     }
     .id1 {
         display: none;
@@ -1098,6 +1110,10 @@ svg:hover {
     }
     .popup_description button {
         position: static;
+    }
+    /* NEW YEAR */
+    .main-ny {
+        margin: 5vw;
     }
 }
 @media screen and (min-width: 992px) and (max-width: 1000px) {
