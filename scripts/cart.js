@@ -119,7 +119,7 @@ function showCart() {
         $.getJSON('/seasongoods.json', function(data) {
             var seasonGoods = data;
             var out = '';
-            out +='<div class="big-div"><h1 class="biggy">КОРЗИНА</h1></div><div class="zind"><h2>Корзина</h2><img class="emoji emb" src="/images/cart.png" alt="😉"></div>'
+            out +='<div class="big-div"><h1 class="biggy">НОВОГОДНЯЯ КОРЗИНА</h1></div><div class="zind"><h2>Новогодняя корзина</h2><img class="emoji emb" src="/images/cart.png" alt="😉"></div>'
             for (var id in seasonCart) {
                 out +='<div class="item">';
                 out +='<img src="/'+seasonGoods[id].img+'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + seasonGoods[id].description + '">';
