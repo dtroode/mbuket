@@ -113,7 +113,6 @@ function showCart() {
             $('.del-goods').on('click', deleteGoods);
             $('.plus-goods').on('click', plusGoods);
             $('.minus-goods').on('click', minusGoods);
-            console.log(out);
         });
     } else if (isEmpty(seasonCart)) {
         $.getJSON('/seasongoods.json', function(data) {
@@ -249,24 +248,33 @@ function isEmpty(object) {
     return false;
 }
 
+function clearValue() {
+    $('.mail-text').html('Email:');
+}
+
+function clearAndShowValue() {
+    $('.phone-text').html('Телефон:');
+    var phones = { "mask": "## (###) ###-##-##"};
+    $('#ephone').inputmask({ 
+        mask: phones, 
+        greedy: false, 
+        definitions: { '#': { validator: "[+0-9]", cardinality: 1} } });
+}
+
 function sendEmail() {
     var ename = $('#ename').val();
     var email = $('#email').val();
     var ephone = $('#ephone').val();
     var emailPattern = /[0-9A-Za-z_-]+@[0-9A-Za-z_-]+\.[A-Za-zА-Яa-я]{2,5}/i;
-    var phonePattern = /[0-9]{7,11}/i;
+    var phonePattern = /((\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}/i;
     if (ename == '' || email == '' || ephone == '') {
         $('.alert-div').css({"display": "block"});
         $('.input').css({"display": "block"});
         $('.overlay').css({"display": "block"});
     } else if (emailPattern.test(email) == false) {
-        $('.alert-div').css({"display": "block"});
-        $('.mail').css({"display": "block"});
-        $('.overlay').css({"display": "block"});
+        $('.mail-text').html('Email введен неверно');
     } else if (phonePattern.test(ephone) == false) {
-        $('.alert-div').css({"display": "block"});
-        $('.numbers').css({"display": "block"});
-        $('.overlay').css({"display": "block"});
+        $('.phone-text').html('Телефон введен неверно');
     } else if (ename != '' && email != '' && ephone != '') {
         if (isEmpty(cart)) {
             $.post(

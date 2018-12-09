@@ -72,6 +72,18 @@ img {
     -moz-user-select: none;
     user-select: none;
 }
+::-webkit-input-placeholder {
+    color: #696868;
+}
+::-ms-input-placeholder {
+    color: #696868;
+}
+::-moz-input-placeholder {
+    color: #696868;
+}
+::-o-input-placeholder {
+    color: #696868;
+}
 input {
     width: 300px;
     height: 50px;
@@ -80,6 +92,11 @@ input {
     box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
     font-size: 75%;
     font-weight: bold;
+    color: #696868;
+}
+input:focus {
+    outline-color: var(--red);
+    color: var(--gray);
 }
 svg {
     width: 40px;

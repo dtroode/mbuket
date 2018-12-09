@@ -43,6 +43,7 @@
 
     <!--Scripts-->
     <script src="/scripts/jq.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
     <script src="/scripts/wow.min.js"></script>
     <script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js" integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA"
         crossorigin="anonymous"></script>
@@ -136,9 +137,9 @@
                     <div class="overlay"></div>
                     <h2>Заказ</h2>
                     <img src="/images/smile.png" alt="😀" class="emoji emb">
-                    <p class="input-text">Имя: <br /><input type="text" placeholder="Имя Фамилия" type="text" id="ename"></p>
-                    <p class="input-text">Email: <br /><input type="email" placeholder="example@email.com" type="text" id="email"></p>
-                    <p class="input-text">Телефон: <br /><input type="tel" pattern="[0-9]{7,11}" required placeholder="84950000000" type="text" id="ephone"></p>
+                    <p class="input-text"><span class="name-text">Имя: </span><br /><input type="text" placeholder="Имя Фамилия" type="text" id="ename"></p>
+                    <p class="input-text"><span class="mail-text">Email: </span><br /><input type="email" placeholder="example@email.com" type="text" id="email" onclick="clearValue()"></p>
+                    <p class="input-text"><span class="phone-text">Телефон: </span><br /><input type="tel" pattern="((\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}" required value="+7" type="text" id="ephone" onclick="clearAndShowValue()"></p>
                     <button class="send-email cart-func">Заказать</button>
                     <div class="thanks">
                         <svg onclick="closeThanks()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -195,9 +196,6 @@
                     <div class="alert-div">
                         <div class="alert-div-overlay"></div>
                         <h2 class="input">Заполните поля</h2>
-                        <h2 class="cart">Корзина пуста</h2>
-                        <h2 class="mail">Email введен неправильно</h2>
-                        <h2 class="numbers">Номер введен неправильно</h2>
                         <h2 class="retry">Повторите заказ</h2>
                         <svg onclick="closeAlert()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" /><!-- Code injected by live-server -->
