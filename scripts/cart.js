@@ -55,6 +55,7 @@ function showCart() {
                 out +='<button data-id="'+id+'" class="minus-goods remove-fr-cart cart-func">-</button>';
                 out +='<button data-id="'+id+'" class="plus-goods remove-fr-cart cart-func">+</button>';
                 out +='<p class="number">'+cart[id]+'</p>';
+                out += '<hr>';
                 out +='</div>';
                 out +='</div>';
                 num += goods[id].cost * cart[id];
@@ -79,6 +80,7 @@ function showCart() {
                 out +='<button data-id="'+id+'" class="minus-season-goods remove-fr-cart cart-func">-</button>';
                 out +='<button data-id="'+id+'" class="plus-season-goods remove-fr-cart cart-func">+</button>';
                 out +='<p class="number">'+seasonCart[id]+'</p>';
+                out += '<hr>';
                 out +='</div>';
                 out +='</div>';
                 num += seasonGoods[id].cost * seasonCart[id];

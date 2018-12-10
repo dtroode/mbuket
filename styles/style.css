@@ -48,9 +48,16 @@ button {
 h1 {
     font-size: 600%;
     width: 500px;
+    line-height: 90px;
+    letter-spacing: -0.05rem;
 }
 h2 {
     font-size: 400%;
+    line-height: 60px;
+    letter-spacing: -0.05rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
 }
 a {
 	outline: none;
@@ -61,6 +68,11 @@ a:visited {
 }
 p {
     font-size: 100%;
+}
+a p {
+    line-height: unset !important;
+    word-spacing: unset !important;
+    letter-spacing: unset !important;
 }
 video {
     opacity: 0.7;
@@ -191,11 +203,15 @@ svg:hover {
     font-size: 150%;
     position: absolute;
     z-index: 2;
-    top: 200px;
-    bottom: 200px;
+    top: 230px;
+    bottom: 230px;
     left: 150px;
     width: 400px;
     font-style: italic;
+    margin-bottom: 0;;
+    line-height: 30px;
+    word-spacing: 0.01rem;
+    letter-spacing: -0.005rem;
 }
 .link, .nlink {
     font-size: 100%;
@@ -306,7 +322,11 @@ svg:hover {
     color: var(--pink);
 }
 .main p {
-    margin-top: 20px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+.main h2 {
+    margin-bottom: 0px;
 }
 .main-main p {
     width: 500px;
@@ -377,9 +397,17 @@ svg:hover {
     position: relative;
     z-index: 2;
 }
+.main p, .who-we, .why-we, .where-we {
+    line-height: 22.5px;
+    word-spacing: 0.05rem;
+    letter-spacing: -0.005rem;
+}
 .who-we, .why-we, .where-we {
-    margin: 40px 0 40px 0;
+    margin: 20px 0 80px 0;
     width: 600px;
+}
+.why-we {
+    margin-top: 80px;
 }
 .images {
     width: 600px;
@@ -533,8 +561,10 @@ svg:hover {
 }
 .name {
     font-size: 175%;
-    margin: 10px 0 10px 0;
+    margin: 10px 0 20px 0;
     width: 90%;
+    line-height: 37.5px;
+    letter-spacing: -0.01rem;
 }
 .number {
     font-size: 125%;
@@ -554,6 +584,9 @@ svg:hover {
 .total {
     padding: 0;
     min-height: 20vh;
+}
+.total, .email {
+    margin-top: 80px;
 }
 .input-text {
     font-size: 150%;
@@ -715,7 +748,10 @@ svg:hover {
     left: 0;
     right: 0;
 }
-.emb, .pmb {
+.emb {
+    margin-bottom: 20px;
+}
+.pmb {
     margin-bottom: 40px;
 }
 .s2 {
@@ -741,6 +777,10 @@ svg:hover {
 .item img:hover, .item-2 img:hover {
     border: 24px solid var(--gray);
     cursor: pointer;
+}
+.item hr {
+    width: 350px;
+    background-color: rgb(40, 48, 55, 0.05);
 }
 /* .item-2 {
     width: 600px;
@@ -849,7 +889,10 @@ svg:hover {
     margin: 0;
     width: 200px;
 }
-/* NEW YEAR */
+.split {
+    margin-top: 80px;
+}
+/* SEASON */
 .newyear {
     position: fixed;
     top: 0;
@@ -923,6 +966,9 @@ svg:hover {
     input {
         width: 90vw;
     }
+    hr {
+        width: 100%;
+    }
     .cookie {
         top: unset;
         bottom: 0;
@@ -993,6 +1039,7 @@ svg:hover {
         width: unset;
         font-size: 125%;
         margin-bottom: 50px;
+        line-height: 25px;
     }
     .second, .product {
         padding: 5vw;
@@ -1023,6 +1070,9 @@ svg:hover {
     }
     .why-we, .where-we {
         width: unset;
+    }
+    .why-we {
+        margin-top: 20px;
     }
     .last-image {
         position: static;
@@ -1128,9 +1178,15 @@ svg:hover {
     .popup_description button {
         position: static;
     }
-    /* NEW YEAR */
+    .split {
+        margin-top: 5vw;
+    }
+    /* SEASON */
     .main-ny {
         margin: 5vw;
+    }
+    .season-goods-out .item:last-child hr {
+        border: 0;
     }
 }
 @media screen and (min-width: 992px) and (max-width: 1000px) {
