@@ -1,9 +1,4 @@
 @font-face{
-	font-family:"Neue Haas Grotesk Text Bd";
-	font-weight:700;
-	src:url("/fonts/NeueHaasGroteskText75Bold.woff?#iefix");
-}
-@font-face{
 	font-family:"Helvetica";
 	font-weight:700;
 	src:url("/fonts/HelveticaBold.woff#iefix");
@@ -38,7 +33,7 @@ a {
     text-decoration: none;
 }
 h1, h2, button, a, p {
-    font-family: 'Neue Haas Grotesk Text Bd', Helvetica, 'Helvetica Neue', Arial, sans-serif;
+    font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
     font-weight: 700;
 }
 button {
@@ -69,7 +64,7 @@ a:visited {
 p {
     font-size: 100%;
 }
-.main-main a p {
+.main a p {
     line-height: unset !important;
     word-spacing: unset !important;
     letter-spacing: unset !important;
