@@ -21,6 +21,7 @@ function goodsOut(data) {
         out += '<div class="item">';
         out += '<img data-src="/' + data[key].img + '" class="wow fadeInUp image lazyload" alt="' + data[key].description + '" onclick="imageClick(this)">';
         out += '<p class="name wow fadeInUp">' + data[key].name + '</p>';
+        out += '<p class="cost">'+ data[key].cost+ ' ₽'+'</p>';
         out += '<button class="add-to-cart cart-func wow fadeInUp" onclick="showLink()" data-id="' + key + '">Добавить в корзину</button>';
         out += '<hr>';
         out += '</div>';
@@ -37,6 +38,7 @@ function seasonGoodsOut(data) {
         out += '<div class="item">';
         out += '<img data-src="/' + data[key].img + '" class="wow fadeInUp image lazyload" alt="' + data[key].description + '" onclick="imageClick(this)">';
         out += '<p class="name wow fadeInUp">' + data[key].name + '</p>';
+        out += '<p class="cost">'+ data[key].cost+ ' ₽'+'</p>';
         out += '<button class="add-to-season-cart cart-func wow fadeInUp" onclick="showLink()" data-id="' + key + '">Добавить в корзину</button>';
         out += '<hr>'
         out += '</div>';
@@ -182,24 +184,6 @@ function closeCookie() {
     setCookie('policy', 'yes', '/');
 }
 
-function imageSeasonClick(e) {
-    setTimeout(() => {    
-        var img = $(e);
-        var src = img.attr('src');
-        var name = $(e).next().text();
-        var button = $(e).next().attr('data-id');
-        var description = img.attr('alt');
-        $("body").append("<div class='popup'>" +
-            "<div class='popup_bg'>" +
-            "<img src='" + src + "' class='popup_img'>" +
-            "<div class='popup_description'><h2>" + name + "</h2><p>" + description + "</p><button class='add-to-cart cart-func wow fadeInUp' onclick='showLink()' data-id='" + button + "'>Добавить в корзину</button></div></div></div>");
-        $(".popup").fadeIn(200);
-        $(".popup_bg").on('click', closeImage);
-        $(".popup_description").on('click', preventCloseImage);
-        $(".add-to-cart").on('click', addToSeasonCart);
-    }, 500);
-}
-
 function imageClick(e) {
     var img = $(e);
     var src = img.attr('src');
@@ -209,7 +193,7 @@ function imageClick(e) {
     $("body").append("<div class='popup'>" +
         "<div class='popup_bg'>" +
         "<img src='" + src + "' class='popup_img'>" +
-        "<div class='popup_description'><h2>" + name + "</h2><p>" + description + "</p><button class='add-to-cart cart-func wow fadeInUp' onclick='showLink()' data-id='" + button + "'>Добавить в корзину</button></div></div></div>");
+        "<div class='popup_description'><h3>" + name + "</h3><p>" + description + "</p><button class='add-to-cart cart-func wow fadeInUp' onclick='showLink()' data-id='" + button + "'>Добавить в корзину</button></div></div></div>");
     $(".popup").fadeIn(200);
     $(".popup_bg").on('click', closeImage);
     $(".popup_description").on('click', preventCloseImage);
@@ -226,28 +210,23 @@ function closeImage() {
 function preventCloseImage(event) {
     event.stopPropagation();
 }
-
 function isEmpty(object) {
     for (var key in object)
     if (object.hasOwnProperty(key)) return true;
     return false;
 }
 
-function closeNY() {
-    var nYheight = $('.newyear').height()
-    $('.newyear').css({
-        "top": "-" + nYheight + "px",
-        "opacity": "0"
-    })
-    setTimeout(() => {
-        $('.newyear').css({
-            "display": "none"
-        })
-    }, 200);
+function initMap() {
+    var coordinates = {lat: 47.212325, lng: 38.933663},
+    map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 50,
+        center: coordinates
+    });
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
     init();
+    initMap();
     seasonInit();
     seasonTopInit();
     loadCart();

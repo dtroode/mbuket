@@ -32,7 +32,7 @@ a {
     color: var(--gray);
     text-decoration: none;
 }
-h1, h2, button, a, p {
+h1, h2, h3, button, a, p {
     font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
     font-weight: 700;
 }
@@ -53,6 +53,12 @@ h2 {
     margin-bottom: 20px;
     position: relative;
     z-index: 2;
+}
+h3 {
+    font-size: 262%;
+    letter-spacing: -0.9px;
+    line-height: 40px;
+    color: var(--gray);
 }
 a {
 	outline: none;
@@ -483,6 +489,7 @@ svg:hover {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    padding: 0;
 }
 .last-image h2 {
     position: relative;
@@ -492,27 +499,23 @@ svg:hover {
     color: #FFFFFF;
     z-index: 2;
 }
-.last-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000000;
-    opacity: 0.5;
-}
 .blur {
     background: url(/images/wtcblur.jpg);
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
     position: relative;
     z-index: 2;
     width: 610px;
     height: 300px;
     border: 20px solid var(--gray);
     padding: 25px 15px;
+}
+.wtc {
+    background: url(/images/wtc.jpg);
+}
+.blur, .wtc {
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .inline {
     position: relative;
@@ -575,6 +578,9 @@ svg:hover {
 .cost {
     font-size: 150%;
     opacity: 0.8;
+    position: absolute;
+    bottom: 125px;
+    margin: 0;
 }
 .total {
     padding: 0;
@@ -597,10 +603,6 @@ svg:hover {
     margin-top: 40px;
     line-height: 50px;
 }
-.add-to-cart, .add-to-season-cart {
-    margin: 0 0 30px 0;
-    box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
-}
 .remove-fr-cart {
     width: 105px;
 }
@@ -614,6 +616,12 @@ svg:hover {
     line-height: 50px;
     display: inline-block;
     position: relative;
+}
+.add-to-cart, .add-to-season-cart {
+    margin: 0 0 30px 0;
+    box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
+    position: absolute;
+    bottom: 30px;
 }
 .cart-func:hover {
     box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56) !important;
@@ -630,6 +638,8 @@ svg:hover {
     height: 50px;
     width: 255px;
     margin: 0 0 30px 0;
+    position: absolute;
+    bottom: 30px;
 }
 .main-cart {
     margin-bottom: 80px;
@@ -754,11 +764,12 @@ svg:hover {
 }
 .item {
     width: 300px;
-    min-height: 400px;
+    height: 570px;
     margin-right: 50px;
     position: relative;
     z-index: 2;
     display: inline-block;
+    vertical-align: top;
 }
 .item img, .item-2 img {
     -webkit-user-select: auto;
@@ -774,8 +785,11 @@ svg:hover {
     cursor: pointer;
 }
 .item hr {
+    position: absolute;
+    bottom: 16px;
     width: 350px;
     background-color: rgb(40, 48, 55, 0.05);
+    margin: 0;
 }
 /* .item-2 {
     width: 600px;
@@ -836,7 +850,7 @@ svg:hover {
     padding: 25px;
     cursor: auto;
 }
-.popup_description h2 {
+.popup_description h3 {
     text-align: left;
     font-size: 200%;
 }
@@ -887,49 +901,20 @@ svg:hover {
 .split {
     margin-top: 80px;
 }
-/* SEASON */
-.newyear {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    left: 0;
-    z-index: 100;
-    color: var(--red);
-    text-align: center;
-    background-image: url(/images/newyear.jpg);
-    background-size: cover;
-    background-position: center center;
-}
-.overlay-ny {
-    position: absolute;
-    background-color: var(--gray);
-    width: 100vw;
+.map {
+    width: 100%;
     height: 100%;
-    opacity: 0.5;
+    position: absolute;
+    border: 0;
+    padding-top: 100px;
 }
-.main-ny {
-    position: relative;
-    margin: 80px;
-    left: 0;
-    right: 0;
+#map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
-.main-ny button {
-    background: var(--red);
-    color: var(--gray);
-    height: 50px;
-    font-size: 125%;
-    border: none;
-    padding: 0 10px;
-    line-height: 50px;
-    position: relative;
-    box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
-    cursor: pointer;
-}
-.main-ny button:hover {
-    box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56);
-}
-.newyear p {
-    font-size: 150%;
+#map:active {
+    outline: none;
 }
 
 /* ------------MEDIA ADAPTATION------------ */
@@ -963,9 +948,6 @@ svg:hover {
     }
     input {
         width: 90vw;
-    }
-    hr {
-        width: 100%;
     }
     .cookie {
         top: unset;
@@ -1091,10 +1073,6 @@ svg:hover {
         margin: 0 0 5vw 0;
         display: block;
     }
-    .last-overlay {
-        height: 100vh;
-        top: unset;
-    }
     .contact-info {
         position: static;
         font-size: 125%;
@@ -1115,9 +1093,15 @@ svg:hover {
     .item, .item-2 {
         width: 100vw;
         margin-right: 0;
+        height: auto;
     }
     .item img, .item-2 img {
         width: 90vw;
+    }
+    .item hr {
+        position: static;
+        bottom: unset;
+        width: 100%;
     }
     .name {
         width: 100%;
@@ -1185,6 +1169,9 @@ svg:hover {
     }
     .season-goods-out .item:last-child hr {
         border: 0;
+    }
+    .add-to-cart, .add-to-season-cart {
+        position: static;
     }
 }
 @media screen and (min-width: 992px) and (max-width: 1000px) {

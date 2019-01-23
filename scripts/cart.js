@@ -44,20 +44,20 @@ function showCart() {
         $.getJSON('/goods.json', function(data) {
             var goods = data;
             var out = '';
-            out +='<div class="big-div"><h1 class="biggy">КОРЗИНА</h1></div><div class="zind"><h2>Корзина</h2><img class="emoji emb" src="/images/cart.png" alt="😉"></div>'
+            out += '<div class="big-div"><h1 class="biggy">КОРЗИНА</h1></div><div class="zind"><h2>Корзина</h2><img class="emoji emb" src="/images/cart.png" alt="😉"></div>'
             for (var id in cart) {
-                out +='<div class="item">';
-                out +='<img src="/'+goods[id].img+'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + goods[id].description + '">';
-                out +='<p class="name wow fadeInUp">'+goods[id].name+'</p>';
-                out +='<p class="cost">'+cart[id] * goods[id].cost+ ' ₽'+'</p>';
-                out +='<div class="button-container wow fadeInUp">';
-                out +='<button data-id="'+id+'" class="del-goods remove-fr-cart cart-func">Удалить</button>';
-                out +='<button data-id="'+id+'" class="minus-goods remove-fr-cart cart-func">-</button>';
-                out +='<button data-id="'+id+'" class="plus-goods remove-fr-cart cart-func">+</button>';
-                out +='<p class="number">'+cart[id]+'</p>';
+                out += '<div class="item">';
+                out += '<img src="/'+ goods[id].img +'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + goods[id].description + '">';
+                out += '<p class="name wow fadeInUp">'+ goods[id].name +'</p>';
+                out += '<p class="cost">'+ cart[id] * goods[id].cost + ' ₽'+'</p>';
+                out += '<div class="button-container wow fadeInUp">';
+                out += '<button data-id="'+ id +'" class="del-goods remove-fr-cart cart-func">Удалить</button>';
+                out += '<button data-id="'+ id +'" class="minus-goods remove-fr-cart cart-func">-</button>';
+                out += '<button data-id="'+ id +'" class="plus-goods remove-fr-cart cart-func">+</button>';
+                out += '<p class="number">'+ cart[id]+'</p>';
+                out += '</div>';
                 out += '<hr>';
-                out +='</div>';
-                out +='</div>';
+                out += '</div>';
                 num += goods[id].cost * cart[id];
                 $('.total').html('<h2>Итого:</h2><img class="emoji emb" src="/images/slightly.png" alt="🙂"><p class="name pmb">' + num + ' рублей</p>');
             }
@@ -69,20 +69,20 @@ function showCart() {
         $.getJSON('/seasongoods.json', function(data) {
             var seasonGoods = data;
             var out = '';
-            out +='<div class="big-div"><h1 class="biggy">НОВОГОДНЯЯ КОРЗИНА</h1></div><div class="zind"><h2>Новогодняя корзина</h2><img class="emoji emb" src="/images/cart.png" alt="😉"></div>'
+            out += '<div class="big-div"><h1 class="biggy">НОВОГОДНЯЯ КОРЗИНА</h1></div><div class="zind"><h2>Новогодняя корзина</h2><img class="emoji emb" src="/images/cart.png" alt="😉"></div>'
             for (var id in seasonCart) {
-                out +='<div class="item">';
-                out +='<img src="/'+seasonGoods[id].img+'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + seasonGoods[id].description + '">';
-                out +='<p class="name wow fadeInUp">'+seasonGoods[id].name+'</p>';
-                out +='<p class="cost">'+seasonCart[id] * seasonGoods[id].cost+ ' ₽'+'</p>';
-                out +='<div class="button-container wow fadeInUp">';
-                out +='<button data-id="'+id+'" class="del-season-goods remove-fr-cart cart-func">Удалить</button>';
-                out +='<button data-id="'+id+'" class="minus-season-goods remove-fr-cart cart-func">-</button>';
-                out +='<button data-id="'+id+'" class="plus-season-goods remove-fr-cart cart-func">+</button>';
-                out +='<p class="number">'+seasonCart[id]+'</p>';
+                out += '<div class="item">';
+                out += '<img src="/'+seasonGoods[id].img +'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + seasonGoods[id].description + '">';
+                out += '<p class="name wow fadeInUp">'+seasonGoods[id].name +'</p>';
+                out += '<p class="cost">'+seasonCart[id] * seasonGoods[id].cost + ' ₽'+'</p>';
+                out += '<div class="button-container wow fadeInUp">';
+                out += '<button data-id="'+ id +'" class="del-season-goods remove-fr-cart cart-func">Удалить</button>';
+                out += '<button data-id="'+ id +'" class="minus-season-goods remove-fr-cart cart-func">-</button>';
+                out += '<button data-id="'+ id +'" class="plus-season-goods remove-fr-cart cart-func">+</button>';
+                out += '<p class="number">'+seasonCart[id]+'</p>';
+                out += '</div>';
                 out += '<hr>';
-                out +='</div>';
-                out +='</div>';
+                out += '</div>';
                 num += seasonGoods[id].cost * seasonCart[id];
                 $('.total').html('<h2>Итого:</h2><img class="emoji emb" src="/images/slightly.png" alt="🙂"><p class="name pmb">' + num + ' рублей</p>');
             }
@@ -95,20 +95,20 @@ function showCart() {
         $.getJSON('/goods.json', function(data) {
             var goods = data;
             var out = '';
-            out +='<div class="big-div"><h1 class="biggy">КОРЗИНА</h1></div><div class="zind"><h2>Корзина</h2><img class="emoji emb" src="/images/cart.png" alt="😉"></div>'
+            out += '<div class="big-div"><h1 class="biggy">КОРЗИНА</h1></div><div class="zind"><h2>Корзина</h2><img class="emoji emb" src="/images/cart.png" alt="😉"></div>'
             for (var id in cart) {
-                out +='<div class="item">';
-                out +='<img src="/'+goods[id].img+'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + goods[id].description + '">';
-                out +='<p class="name wow fadeInUp">'+goods[id].name+'</p>';
-                out +='<p class="cost">'+cart[id] * goods[id].cost+ ' ₽'+'</p>';
-                out +='<div class="button-container wow fadeInUp">';
-                out +='<button data-id="'+id+'" class="del-goods remove-fr-cart cart-func">Удалить</button>';
-                out +='<button data-id="'+id+'" class="minus-goods remove-fr-cart cart-func">-</button>';
-                out +='<button data-id="'+id+'" class="plus-goods remove-fr-cart cart-func">+</button>';
-                out +='<p class="number">'+cart[id]+'</p>';
+                out += '<div class="item">';
+                out += '<img src="/'+ goods[id].img +'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + goods[id].description + '">';
+                out += '<p class="name wow fadeInUp">'+ goods[id].name +'</p>';
+                out += '<p class="cost">'+ cart[id] * goods[id].cost + ' ₽'+'</p>';
+                out += '<div class="button-container wow fadeInUp">';
+                out += '<button data-id="'+ id +'" class="del-goods remove-fr-cart cart-func">Удалить</button>';
+                out += '<button data-id="'+ id +'" class="minus-goods remove-fr-cart cart-func">-</button>';
+                out += '<button data-id="'+ id +'" class="plus-goods remove-fr-cart cart-func">+</button>';
+                out += '<p class="number">'+ cart[id]+'</p>';
+                out += '</div>';
                 out += '<hr>';
-                out +='</div>';
-                out +='</div>';
+                out += '</div>';
                 num += goods[id].cost * cart[id];
                 $('.total').html('<h2>Итого:</h2><img class="emoji emb" src="/images/slightly.png" alt="🙂"><p class="name pmb">' + num + ' рублей</p>');
             }
@@ -121,20 +121,20 @@ function showCart() {
         $.getJSON('/seasongoods.json', function(data) {
             var seasonGoods = data;
             var out = '';
-            out +='<div class="big-div"><h1 class="biggy">НОВОГОДНЯЯ КОРЗИНА</h1></div><div class="zind"><h2>Новогодняя корзина</h2><img class="emoji emb" src="/images/cart.png" alt="😉"></div>'
+            out += '<div class="big-div"><h1 class="biggy">НОВОГОДНЯЯ КОРЗИНА</h1></div><div class="zind"><h2>Новогодняя корзина</h2><img class="emoji emb" src="/images/cart.png" alt="😉"></div>'
             for (var id in seasonCart) {
-                out +='<div class="item">';
-                out +='<img src="/'+seasonGoods[id].img+'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + seasonGoods[id].description + '">';
-                out +='<p class="name wow fadeInUp">'+seasonGoods[id].name+'</p>';
-                out +='<p class="cost">'+seasonCart[id] * seasonGoods[id].cost+ ' ₽'+'</p>';
-                out +='<div class="button-container wow fadeInUp">';
-                out +='<button data-id="'+id+'" class="del-season-goods remove-fr-cart cart-func">Удалить</button>';
-                out +='<button data-id="'+id+'" class="minus-season-goods remove-fr-cart cart-func">-</button>';
-                out +='<button data-id="'+id+'" class="plus-season-goods remove-fr-cart cart-func">+</button>';
-                out +='<p class="number">'+seasonCart[id]+'</p>';
+                out += '<div class="item">';
+                out += '<img src="/'+seasonGoods[id].img +'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + seasonGoods[id].description + '">';
+                out += '<p class="name wow fadeInUp">'+seasonGoods[id].name +'</p>';
+                out += '<p class="cost">'+seasonCart[id] * seasonGoods[id].cost + ' ₽'+'</p>';
+                out += '<div class="button-container wow fadeInUp">';
+                out += '<button data-id="'+ id +'" class="del-season-goods remove-fr-cart cart-func">Удалить</button>';
+                out += '<button data-id="'+ id +'" class="minus-season-goods remove-fr-cart cart-func">-</button>';
+                out += '<button data-id="'+ id +'" class="plus-season-goods remove-fr-cart cart-func">+</button>';
+                out += '<p class="number">'+seasonCart[id]+'</p>';
+                out += '</div>';
                 out += '<hr>';
-                out +='</div>';
-                out +='</div>';
+                out += '</div>';
                 num += seasonGoods[id].cost * seasonCart[id];
                 $('.total').html('<h2>Итого:</h2><img class="emoji emb" src="/images/slightly.png" alt="🙂"><p class="name pmb">' + num + ' рублей</p>');
             }
@@ -228,7 +228,7 @@ function imageClick(e) {
     $("body").append("<div class='popup'>" +
         "<div class='popup_bg'>" +
         "<img src='" + src + "' class='popup_img'>" +
-        "<div class='popup_description'><h2>" + name + "</h2><p>" + description + "</p><button data-id='" + button + "' class='del-goods remove-fr-cart cart-func'>Удалить из корзины</button></div></div></div>");
+        "<div class='popup_description'><h3>" + name + "</h3><p>" + description + "</p><button data-id='" + button + "' class='del-goods remove-fr-cart cart-func'>Удалить из корзины</button></div></div></div>");
     $(".popup").fadeIn(200);
     $('.popup_bg').on('click', closeImage);
     $(".popup_description").on('click', preventCloseImage);
