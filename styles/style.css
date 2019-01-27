@@ -67,10 +67,14 @@ a {
 a:visited {
     color: inherit;
 }
-p {
+p, p a {
     font-size: 100%;
 }
-.main a p {
+p a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+div.main a p {
     line-height: unset !important;
     word-spacing: unset !important;
     letter-spacing: unset !important;
@@ -119,6 +123,10 @@ svg {
 }
 svg:hover {
     fill: var(--red);
+}
+.beta {
+    color: var(--red);
+    font-size: 50%;
 }
 .cookie {
     display: none;
@@ -345,6 +353,9 @@ svg:hover {
     background: var(--gray);
 }
 .fourth {
+    background: var(--red);
+}
+.fourth, .fifth {
     color: var(--gray);
 }
 .t1 { 
@@ -394,21 +405,52 @@ svg:hover {
 .hb {
     display: none;
 }
-.we {
+.we, .insta {
     position: relative;
     z-index: 2;
 }
-.main p, .who-we, .why-we, .where-we {
+.insta {
+    border: 20px solid var(--gray);
+}
+.insta-photos-blocks {
+    padding: 0;
+}
+.insta-photos {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-top: center 20px solid var(--gray);
+    border-bottom: center 20px solid var(--gray);
+}
+.account-link {
+    text-align: center;
+    display: block;
+    background: var(--pink);
+    width: 100%;
+    font-size: 300%;
+}
+.account-link:hover {
+    color: var(--red);
+    text-decoration: none;
+}
+.main p, .we {
     line-height: 22.5px;
     word-spacing: 0.05rem;
     letter-spacing: -0.005rem;
 }
-.who-we, .why-we, .where-we {
+.we {
     margin: 20px 0 80px 0;
     width: 600px;
 }
 .why-we {
     margin-top: 80px;
+}
+.socials a {
+    border-bottom: 4px solid var(--gray);
+}
+.socials a:hover {
+    color: var(--pink);
+    border-bottom: 4px solid var(--pink);
 }
 .images {
     width: 600px;
@@ -1048,7 +1090,7 @@ svg:hover {
     .s2 {
         float: unset;
     }
-    .why-we, .where-we {
+    .why-we, .where-we, .socials {
         width: unset;
     }
     .why-we {
@@ -1060,7 +1102,6 @@ svg:hover {
         background-attachment: scroll;
     }
     .blur {
-        background-attachment: scroll;
         background-size: unset;
         width: 90vw;
         padding: 10px;
@@ -1068,6 +1109,7 @@ svg:hover {
         margin: 0 0 5vw 0;
     }
     .inline {
+        background-attachment: scroll;
         width: 90vw;
         height: 90vw;
         margin: 0 0 5vw 0;
@@ -1103,6 +1145,9 @@ svg:hover {
         bottom: unset;
         width: 100%;
         margin-bottom: 10px;
+    }
+    .item:last-child hr {
+        display: none;
     }
     .cost {
         position: static;
@@ -1176,6 +1221,9 @@ svg:hover {
     }
     .main-cart, .common {
         margin-bottom: 5vw;
+    }
+    .account-link {
+        font-size: 150%;
     }
     /* SEASON */
     .main-ny {
