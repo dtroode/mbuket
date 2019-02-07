@@ -216,9 +216,6 @@ function isEmpty(object) {
     return false;
 }
 
-var firstBlockWidth = $('.main').height();
-console.log(firstBlockWidth)
-
 $(document).ready(function() {
     init();
     seasonInit();

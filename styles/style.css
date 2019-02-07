@@ -318,20 +318,29 @@ svg:hover {
 .full {
     padding: 0;
 }
+.perv, .id1 {
+    position: fixed;
+}
+.id1 {
+    right: 33.33%
+}
+.links {
+    position: absolute;
+    right: 0;
+    z-index: 3;
+}
 .main {
-    width: 500px;
+    width: 100vw;
     position: relative;
     top: 20vh;
-    left: 20vw;
+    padding-left: 20vw;
+    padding-right: 20vw;
     margin-bottom: 40vh;
     z-index: 2;
     color: var(--gray);
-}
-.main-main {
-    width: 750px;
+    min-height: 80vh;
 }
 .main-cookie {
-    background: #FFFFFF;
     color: var(--pink);
 }
 .main p {
@@ -1012,7 +1021,7 @@ svg:hover {
         background-repeat: no-repeat;
     }
     .main-cookie {
-        background: url(/images/cookie.webp);
+        background: url(/images/cookieback.webp);
     }
     .shop-main {
         background: url(/images/shopcart.webp);
@@ -1020,7 +1029,7 @@ svg:hover {
         background-size: cover;
         background-position: center center;
     }
-    .main-main p {
+    .main p {
         margin-top: 0;
         width: 90vw;
     }
@@ -1040,6 +1049,7 @@ svg:hover {
     .links {
         min-height: 50vh;
         height: 50vh;
+        position: static;
     }
     .links a {
         line-height: 50vh;
