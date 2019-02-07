@@ -95,7 +95,7 @@ svg:hover {
     line-height: 100vh;
 }
 .id1 {
-    background: url(../images/map.png);
+    background: url(../images/map.webp);
 }
 .image-div {
     background-attachment: fixed;
@@ -148,7 +148,7 @@ svg:hover {
         width: 100vw;
         margin: 0;
         padding: 0 5vw 5vw 5vw;
-        background: url(../images/map.png);
+        background: url(../images/map.webp);
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: scroll;

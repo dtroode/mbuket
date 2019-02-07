@@ -64,6 +64,9 @@ a {
 	outline: none;
     font-size: 200%;
 }
+a:hover {
+    color: var(--red);
+}
 a:visited {
     color: inherit;
 }
@@ -188,7 +191,7 @@ svg:hover {
     fill: var(--red);
     width: 50px;
     height: 50px;
-    margin: -6px 0 0 0;
+    margin: -3px 0 0 0;
     padding: 10px;
 }
 .arrow:hover {
@@ -298,13 +301,13 @@ svg:hover {
     color: var(--gray);
 }
 .id1 {
-    background: url(/images/flower1.jpg);
+    background: url(/images/flower1.webp);
 }
 .id1-cookie {
-    background: url(/images/cookie.jpg);
+    background: url(/images/cookieback.webp);
 }
 .id2 {
-    background: url(/images/flower2.jpg);
+    background: url(/images/flower2.webp);
 }
 .image-div {
     background-attachment: fixed;
@@ -317,9 +320,10 @@ svg:hover {
 }
 .main {
     width: 500px;
-    position: absolute;
+    position: relative;
     top: 20vh;
     left: 20vw;
+    margin-bottom: 40vh;
     z-index: 2;
     color: var(--gray);
 }
@@ -333,12 +337,10 @@ svg:hover {
 .main p {
     margin-top: 15px;
     margin-bottom: 40px;
+    width: 450px;
 }
 .main h2 {
     margin-bottom: 0px;
-}
-.main-main p {
-    width: 500px;
 }
 .product {
     padding: 80px;
@@ -526,7 +528,7 @@ svg:hover {
     bottom: -45vh;
     left: 0;
     height: 70vh;
-    background: url(/images/wtc.jpg);
+    background: url(/images/wtc.webp);
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -542,7 +544,7 @@ svg:hover {
     z-index: 2;
 }
 .blur {
-    background: url(/images/wtcblur.jpg);
+    background: url(/images/wtcblur.webp);
     position: relative;
     z-index: 2;
     width: 610px;
@@ -551,7 +553,7 @@ svg:hover {
     padding: 25px 15px;
 }
 .wtc {
-    background: url(/images/wtc.jpg);
+    background: url(/images/wtc.webp);
 }
 .blur, .wtc {
     background-attachment: fixed;
@@ -695,7 +697,7 @@ svg:hover {
     border-bottom: 4px solid #FFFFFF;
 }
 .shop-id1 {
-    background: url(/images/shopcart.jpg);
+    background: url(/images/shopcart.webp);
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -718,7 +720,7 @@ svg:hover {
     top: 40vh;
     left: 25vw;
     right: 25vw;
-    background: url(/images/alert.jpg);
+    background: url(/images/alert.webp);
     background-position: center center;
     background-size: cover;
 }
@@ -734,7 +736,7 @@ svg:hover {
     top: 20vh;
     left: 25vw;
     right: 25vw;
-    background: url(/images/thanks.jpg);
+    background: url(/images/thanks.webp);
     background-position: center center;
     background-size: cover;
 }
@@ -952,11 +954,6 @@ svg:hover {
     border: 0;
     padding-top: 100px;
 }
-#map {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
 
 /* ------------MEDIA ADAPTATION------------ */
 @media screen and (max-height: 1800px) {
@@ -1010,15 +1007,15 @@ svg:hover {
         margin: 0;
         padding: 0 5vw 5vw 5vw;
         display: inline-block;
-        background: url(/images/flower1.jpg);
+        background: url(/images/flower1.webp);
         background-size: cover;
         background-repeat: no-repeat;
     }
     .main-cookie {
-        background: url(/images/cookie.jpg);
+        background: url(/images/cookie.webp);
     }
     .shop-main {
-        background: url(/images/shopcart.jpg);
+        background: url(/images/shopcart.webp);
         background-attachment: scroll;
         background-size: cover;
         background-position: center center;
@@ -1226,11 +1223,17 @@ svg:hover {
         font-size: 150%;
     }
     /* SEASON */
+    .scroll-to-season {
+        width: unset;
+    }
     .main-ny {
         margin: 5vw;
     }
     .add-to-cart, .add-to-season-cart {
         position: static;
+    }
+    .nyi {
+        width: 615px;
     }
 }
 @media screen and (min-width: 992px) and (max-width: 1000px) {
@@ -1262,8 +1265,8 @@ svg:hover {
     }
 }
 @media screen and (min-width: 992px) and (max-height: 700px) {
-    .perv {
-        height: 175vh;
+    .perv-main {
+        min-height: 175vh;
     }
 }
 @media screen and (min-width: 417px) and (max-width: 992px) {

@@ -53,7 +53,7 @@ function seasonGoodsTopOut(data) {
         description = '';
         name = '';
         out += '<a href="#season" class="scroll-to-season">';
-        out += '<img src="/' + data[key].img + '" class="square" alt="' + data[key].description + '" onclick="imageSeasonClick(this)">';
+        out += '<img src="/' + data[key].img + '" class="square" alt="' + data[key].description + '" onclick="imageClick(this)">';
         out += '<p data-id="' + key + '">' + data[key].name + '</p>';
         out += '</a>';
         console.log(data);
@@ -216,17 +216,11 @@ function isEmpty(object) {
     return false;
 }
 
-function initMap() {
-    var coordinates = {lat: 47.212325, lng: 38.933663},
-    map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 50,
-        center: coordinates
-    });
-}
+var firstBlockWidth = $('.main').height();
+console.log(firstBlockWidth)
 
 $(document).ready(function() {
     init();
-    initMap();
     seasonInit();
     seasonTopInit();
     loadCart();

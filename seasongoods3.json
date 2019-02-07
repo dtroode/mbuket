@@ -3,21 +3,21 @@
     "name": "Композиция \"Новогодний\"",
     "cost": 5000,
     "order": 99991,
-    "img" : "images/nyi1.jpg",
+    "img" : "images/nyi1.webp",
     "description": "Цветы: Роза, Тюльпан, Астра"
   },
   "Праздничный": {
     "name": "Композиция \"Праздничный\"",
     "cost": 5000,
     "order": 99992,
-    "img" : "images/nyi2.jpg",
+    "img" : "images/nyi2.webp",
     "description": "Цветы: Роза, Тюльпан, Астра"
   },
   "Лучик": {
     "name": "Композиция \"Лучик\"",
     "cost": 5000,
     "order": 99993,
-    "img" : "images/nyi3.jpg",
+    "img" : "images/nyi3.webp",
     "description": "Цветы: Роза, Тюльпан, Астра"
   }
 }

@@ -6,15 +6,15 @@
         "sizes": "128x128",
         "type": "image/png"
     }, {
-        "src": "/images/logos/mlogo64.png",
+        "src": "/images/logos/mlogo32.png",
         "sizes": "64x64",
         "type": "image/png"
     }, {
-        "src": "/images/logos/mlogo32.png",
+        "src": "/images/logos/mlogo32.webp",
         "sizes": "32x32",
         "type": "image/png"
     }, {
-        "src": "/images/logos/mlogo16.png",
+        "src": "/images/logos/mlogo16.webp",
         "sizes": "16x16",
         "type": "image/png"
     }],
