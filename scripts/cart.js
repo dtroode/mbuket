@@ -7,7 +7,7 @@ function loadCart() {
         seasonCart = JSON.parse(getCookie('seasonCart'));
         showCart();
     } else {
-        $('.main-cart').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/cart-empty.webp" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
+        $('.cart-place').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/cart-empty.webp" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
         $('.total').css({"display": "none"});
         getCookie('cart');
         deleteCookie('cart');
@@ -61,7 +61,7 @@ function showCart() {
                 num += goods[id].cost * cart[id];
                 $('.total').html('<h2>Итого:</h2><img class="emoji emb" src="/images/slightly.webp" alt="🙂"><p class="name pmb">' + num + ' рублей</p>');
             }
-            $('.main-cart').html(out);
+            $('.cart-place').html(out);
             $('.del-goods').on('click', deleteGoods);
             $('.plus-goods').on('click', plusGoods);
             $('.minus-goods').on('click', minusGoods);
@@ -86,7 +86,7 @@ function showCart() {
                 num += seasonGoods[id].cost * seasonCart[id];
                 $('.total').html('<h2>Итого:</h2><img class="emoji emb" src="/images/slightly.webp" alt="🙂"><p class="name pmb">' + num + ' рублей</p>');
             }
-            $('.season-main-cart').html(out);
+            $('.season-cart-place').html(out);
             $('.del-season-goods').on('click', deleteSeasonGoods);
             $('.plus-season-goods').on('click', plusSeasonGoods);
             $('.minus-season-goods').on('click', minusSeasonGoods);
@@ -112,7 +112,7 @@ function showCart() {
                 num += goods[id].cost * cart[id];
                 $('.total').html('<h2>Итого:</h2><img class="emoji emb" src="/images/slightly.webp" alt="🙂"><p class="name pmb">' + num + ' рублей</p>');
             }
-            $('.main-cart').html(out);
+            $('.cart-place').html(out);
             $('.del-goods').on('click', deleteGoods);
             $('.plus-goods').on('click', plusGoods);
             $('.minus-goods').on('click', minusGoods);
@@ -138,13 +138,13 @@ function showCart() {
                 num += seasonGoods[id].cost * seasonCart[id];
                 $('.total').html('<h2>Итого:</h2><img class="emoji emb" src="/images/slightly.webp" alt="🙂"><p class="name pmb">' + num + ' рублей</p>');
             }
-            $('.season-main-cart').html(out);
+            $('.season-cart-place').html(out);
             $('.del-season-goods').on('click', deleteSeasonGoods);
             $('.plus-season-goods').on('click', plusSeasonGoods);
             $('.minus-season-goods').on('click', minusSeasonGoods);
         });
     } else {
-        $('.main-cart').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/cart-empty.webp" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
+        $('.cart-place').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/cart-empty.webp" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
         $('.total').css({"display": "none"});
         deleteCookie('cart');
         deleteCookie('seasonCart');
