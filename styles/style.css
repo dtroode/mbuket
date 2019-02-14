@@ -1,7 +1,7 @@
 @font-face{
-	font-family:"Helvetica";
-	font-weight:700;
-	src:url("/fonts/HelveticaBold.woff#iefix");
+	font-family: "Helvetica";
+	font-weight: 700;
+	src: url("/fonts/HelveticaBold.woff#iefix");
 }
 
 :root {
@@ -57,7 +57,7 @@ h2 {
 h3 {
     font-size: 262%;
     letter-spacing: -0.9px;
-    line-height: 78%;
+    line-height: 95%;
     color: var(--gray);
 }
 a {
@@ -219,14 +219,14 @@ svg:hover {
     fill: var(--red);
     width: 50px;
     height: 50px;
-    margin: -3px 0 0 0;
+    margin: 0 0 0 0;
     padding: 10px;
 }
 .arrow:hover {
     fill: var(--gray);
 }
 .clients {
-    background: url(/images/dottedback.png);
+    background: url(/images/png/dottedback.png);
     background-size: contain;
     background-position: center center;
 }
@@ -331,19 +331,19 @@ svg:hover {
     color: var(--gray);
 }
 .image-main {
-    background: url(/images/flower1.webp);
+    background: url(/images/png/flower1.png);
 }
 .image-error {
-    background: url(/images/404back.webp);
+    background: url(/images/png/404back.png);
 }
 .image-cookies {
-    background: url(/images/cookieback.webp);
+    background: url(/images/png/cookieback.png);
 }
 .image-cart {
-    background: url(/images/cartback.webp);
+    background: url(/images/png/cartback.png);
 }
 .image-div-2 {
-    background: url(/images/flower2.webp);
+    background: url(/images/png/flower2.png);
 }
 .id {
     background-attachment: fixed;
@@ -589,7 +589,7 @@ svg:hover {
 .map-background {
     position: absolute;
     width: 100%;
-    background: url(/images/wtc.webp);
+    background: url(/images/png/wtc.png);
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -604,7 +604,7 @@ svg:hover {
     z-index: 2;
 }
 .blur {
-    background: url(/images/wtcblur.webp);
+    background: url(/images/png/wtcblur.png);
     position: relative;
     z-index: 2;
     width: 610px;
@@ -613,7 +613,7 @@ svg:hover {
     padding: 25px 15px;
 }
 .wtc {
-    background: url(/images/wtc.webp);
+    background: url(/images/png/wtc.png);
 }
 .blur, .wtc {
     background-attachment: fixed;
@@ -757,15 +757,6 @@ svg:hover {
     color: var(--pink);
     border-bottom: 4px solid var(--pink);
 }
-.shop-id1 {
-    background: url(/images/shopcart.webp);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
-}
-.shop-main {
-    color: var(--red);
-}
 .input, .cart, .mail, .numbers, .retry {
     display: none;
 }
@@ -781,7 +772,7 @@ svg:hover {
     top: 40vh;
     left: 25vw;
     right: 25vw;
-    background: url(/images/alert.webp);
+    background: url(/images/png/alert.png);
     background-position: center center;
     background-size: cover;
 }
@@ -797,7 +788,7 @@ svg:hover {
     top: 20vh;
     left: 25vw;
     right: 25vw;
-    background: url(/images/thanks.webp);
+    background: url(/images/png/thanks.png);
     background-position: center center;
     background-size: cover;
 }
@@ -1073,24 +1064,15 @@ svg:hover {
         margin: 0;
         padding: 0 5vw 5vw 5vw;
         display: inline-block;
-        background: url(/images/flower1.webp);
+        background: url(/images/png/flower1.png);
         background-size: cover;
         background-repeat: no-repeat;
     }
     .main-error {
-        background: url(/images/404back.webp);
+        background: url(/images/png/404back.png);
     }
     .main-cookies {
-        background: url(/images/cookieback.webp);
-    }
-    .main-cookie p, .shop-main p {
-        background-color: var(--gray);
-    }
-    .shop-main {
-        background: url(/images/shopcart.webp);
-        background-attachment: scroll;
-        background-size: cover;
-        background-position: center center;
+        background: url(/images/png/cookieback.png);
     }
     .main p {
         position: static;

@@ -3,336 +3,288 @@
     "name": "Букет \"Весенняя свежесть\"",
     "cost": 5000,
     "order": 1,
-    "img" : "images/i1.webp",
-    "description": "Цветы: Лизиантусы, Тюльпан, Астра"
+    "img" : "images/i1.png"
   },
   "Краски природы": {
     "name": "Букет \"Краски природы\"",
     "cost": 7000,
     "order": 2,
-    "img" : "images/i2.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i2.png"
   },
   "Светлые чувства": {
     "name": "Букет \"Светлые чувства\"",
     "cost": 8000,
     "order": 3,
-    "img" : "images/i3.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i3.png"
   },
   "Летняя радость": {
     "name": "Букет \"Летняя радость\"",
     "cost": 5000,
     "order": 4,
-    "img" : "images/i4.webp",
-    "description": "Цветы: Роза, Тюльпан"
+    "img" : "images/i4.png"
   },
   "Ночное сверкание": {
     "name": "Букет \"Ночное сверкание\"",
     "cost": 6000,
     "order": 5,
-    "img" : "images/i5.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i5.png"
   },
   "Нежность природы": {
     "name": "Букет \"Нежность природы\"",
     "cost": 5000,
     "order": 6,
-    "img" : "images/i6.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i6.png"
   },
   "Блеск бриллиантов": {
     "name": "Букет \"Блеск бриллиантов\"",
     "cost": 5000,
     "order": 7,
-    "img" : "images/i7.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i7.png"
   },
   "Красно-белый дуэт": {
     "name": "Букет \"Красно-белый дуэт\"",
     "cost": 5000,
     "order": 8,
-    "img" : "images/i8.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i8.png"
   },
   "Свежая поляна": {
     "name": "Букет \"Свежая поляна\"",
     "cost": 5000,
     "order": 9,
-    "img" : "images/i9.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i9.png"
   },
   "Алая любовь": {
     "name": "Букет \"Алая любовь\"",
     "cost": 5000,
     "order": 10,
-    "img" : "images/i10.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i10.png"
   },
   "Летнее пробуждение": {
     "name": "Букет \"Летнее пробуждение\"",
     "cost": 5000,
     "order": 11,
-    "img" : "images/i11.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i11.png"
   },
   "Утренняя радость": {
     "name": "Букет \"Утренняя радость\"",
     "cost": 5000,
     "order": 12,
-    "img" : "images/i12.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i12.png"
   },
   "Цветочный карнавал": {
     "name": "Букет \"Цветочный карнавал\"",
     "cost": 5000,
     "order": 13,
-    "img" : "images/i13.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i13.png"
   },
   "Яркое наслаждение": {
     "name": "Букет \"Яркое наслаждение\"",
     "cost": 5000,
     "order": 14,
-    "img" : "images/i14.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i14.png"
   },
   "Весенняя краса": {
     "name": "Букет \"Весенняя краса\"",
     "cost": 5000,
     "order": 15,
-    "img" : "images/i15.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i15.png"
   },
   "В ожидании лета": {
     "name": "Букет \"В ожидании лета\"",
     "cost": 5000,
     "order": 16,
-    "img" : "images/i16.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i16.png"
   },
   "Первые лучи": {
     "name": "Букет \"Первые лучи\"",
     "cost": 5000,
     "order": 17,
-    "img" : "images/i17.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i17.png"
   },
   "Подарок природы": {
     "name": "Композиция \"По&shyдарок природы\"",
     "cost": 5000,
     "order": 18,
-    "img" : "images/i18.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i18.png"
   },
   "Насыщенные выходные": {
     "name": "Букет \"Насыщен&shyные выходные\"",
     "cost": 5000,
     "order": 19,
-    "img" : "images/i19.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i19.png"
   },
   "Лесная полянка": {
     "name": "Букет \"Лесная полянка\"",
     "cost": 5000,
     "order": 20,
-    "img" : "images/i20.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i20.png"
   },
   "Женская нежность": {
     "name": "Букет \"Женская нежность\"",
     "cost": 5000,
     "order": 21,
-    "img" : "images/i21.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i21.png"
   },
   "Красная луна": {
     "name": "Букет \"Красная луна\"",
     "cost": 5000,
     "order": 22,
-    "img" : "images/i22.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i22.png"
   },
   "Нарядная поляна": {
     "name": "Букет \"Нарядная поляна\"",
     "cost": 5000,
     "order": 23,
-    "img" : "images/i23.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i23.png"
   },
   "Собрание цветов": {
     "name": "Букет \"Собрание цветов\"",
     "cost": 5000,
     "order": 24,
-    "img" : "images/i24.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i24.png"
   },
   "Солнечный зайчик": {
     "name": "Букет \"Солнечный зайчик\"",
     "cost": 5000,
     "order": 25,
-    "img" : "images/i25.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i25.png"
   },
   "Фиолетовый закат": {
     "name": "Композиция \"Фи&shyолетовый закат\"",
     "cost": 5000,
     "order": 26,
-    "img" : "images/i26.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i26.png"
   },
   "Лучи добра": {
     "name": "Букет<br> \"Лучи добра\"",
     "cost": 5000,
     "order": 27,
-    "img" : "images/i27.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i27.png"
   },
   "Осенняя эстетика": {
     "name": "Букет \"Осенняя эстетика\"",
     "cost": 5000,
     "order": 28,
-    "img" : "images/i28.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i28.png"
   },
   "Сладкое послевкусие": {
     "name": "Букет \"Сладкое послевкусие\"",
     "cost": 5000,
     "order": 29,
-    "img" : "images/i29.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i29.png"
   },
   "Тот самый день": {
     "name": "Композиция \"Тот самый день\"",
     "cost": 5000,
     "order": 30,
-    "img" : "images/i30.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i30.png"
   },
   "Райское местечко": {
     "name": "Композиция \"Райс&shyкое местечко\"",
     "cost": 5000,
     "order": 31,
-    "img" : "images/i31.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i31.png"
   },
   "Летнее добро": {
     "name": "Букет \"Летнее добро\"",
     "cost": 5000,
     "order": 32,
-    "img" : "images/i32.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i32.png"
   },
   "Пинки лав": {
     "name": "Букет \"Пинки<br> лав\"",
     "cost": 5000,
     "order": 33,
-    "img" : "images/i33.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i33.png"
   },
   "Кусочек тепла": {
     "name": "Букет \"Кусочек тепла\"",
     "cost": 5000,
     "order": 34,
-    "img" : "images/i34.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i34.png"
   },
   "Искра счастья": {
     "name": "Букет \"Искра счастья\"",
     "cost": 5000,
     "order": 35,
-    "img" : "images/i35.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i35.png"
   },
   "Рыжая осень": {
     "name": "Букет \"Рыжая осень\"",
     "cost": 5000,
     "order": 36,
-    "img" : "images/i36.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i36.png"
   },
   "Рыжая осеньТепло души": {
     "name": "Букет \"Тепло души\"",
     "cost": 5000,
     "order": 37,
-    "img" : "images/i37.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i37.png"
   },
   "Вдохновление": {
     "name": "Букет \"Вдохновление\"",
     "cost": 5000,
     "order": 38,
-    "img" : "images/i38.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i38.png"
   },
   "Теплые оттенки": {
     "name": "Букет \"Теплые оттенки\"",
     "cost": 5000,
     "order": 39,
-    "img" : "images/i39.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i39.png"
   },
   "Черный настрой": {
     "name": "Букет \"Черный настрой\"",
     "cost": 5000,
     "order": 40,
-    "img" : "images/i40.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i40.png"
   },
   "Счастливое время": {
     "name": "Композиция \"Счастливое время\"",
     "cost": 5000,
     "order": 41,
-    "img" : "images/i41.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i41.png"
   },
   "Розы в домике": {
     "name": "Композиция \"Розы в домике\"",
     "cost": 5000,
     "order": 42,
-    "img" : "images/i42.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i42.png"
   },
   "Открытка счастья": {
     "name": "Букет \"Открытка счастья\"",
     "cost": 5000,
     "order": 43,
-    "img" : "images/i43.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i43.png"
   },
   "Прекрасное утро": {
     "name": "Букет \"Прекрасное утро\"",
     "cost": 5000,
     "order": 44,
-    "img" : "images/i44.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i44.png"
   },
   "Любимой": {
     "name": "Композиция \"Любимой\"",
     "cost": 5000,
     "order": 45,
-    "img" : "images/i45.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i45.png"
   },
   "Частичка любви": {
     "name": "Букет \"Частичка любви\"",
     "cost": 5000,
     "order": 46,
-    "img" : "images/i46.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i46.png"
   },
   "Счастья подайте": {
     "name": "Букет \"Счастья подайте\"",
     "cost": 5000,
     "order": 47,
-    "img" : "images/i47.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i47.png"
   },
   "Забава": {
     "name": "Букет \"Забава\"",
     "cost": 5000,
     "order": 48,
-    "img" : "images/i48.webp",
-    "description": "Цветы: Роза, Тюльпан, Астра"
+    "img" : "images/i48.png"
   }
 }

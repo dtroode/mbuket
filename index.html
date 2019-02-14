@@ -17,11 +17,11 @@
     <!--Google / Search Engine Tags-->
     <meta itemprop="name" content="Мастер Букет">
     <meta itemprop="description" content='Мастер Букет - студия дизайна и флористики'>
-    <meta itemprop="image" content="https://masterbuket.com/images/OG.webp">
+    <meta itemprop="image" content="https://masterbuket.com/images/webp/OG.webp">
 
     <!--Facebook Open Graph meta tags-->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://masterbuket.com/images/OG.webp" />
+    <meta property="og:image" content="https://masterbuket.com/images/webp/OG.webp" />
     <meta property="og:url" content="https://masterbuket.com">
     <meta property="og:title" content="Мастер Букет" />
     <meta property="og:description" content="Мастер Букет - студия дизайна и флористики" />
@@ -32,7 +32,7 @@
     <meta name="twitter:url" content="https://masterbuket.com">
     <meta name="twitter:title" content="Мастер Букет">
     <meta name="twitter:description" content="Мастер Букет - студия дизайна и флористики">
-    <meta name="twitter:image" content="https://masterbuket.com/images/OG.webp">
+    <meta name="twitter:image" content="https://masterbuket.com/images/webp/OG.webp">
 
     <!--Links-->
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
@@ -59,7 +59,6 @@
             $(".main h1").ready(function() {
                 if ($(window).width() < 992) {
                     var headerHeight = $(".main h1").height();
-                    console.log(headerHeight);
                     var margin = ($(window).height() - headerHeight)/2;
                     $(".main h1").css({"margin": margin + "px 0 " + margin +"px 0"})
                 } else {
@@ -83,11 +82,11 @@
 
 <body>
     <a href="/cart/#second" class="link-to-cart">
-        <p>В корзину</p><img src="/images/vase.webp" item="🏺">
+        <p>В корзину</p><picture><source srcset="/images/webp/vase.webp"><img src="/images/png/vase.png" item="🏺"></picture>
     </a>
     <div class="cookie">
         <p>Мы используем куки</p>
-        <img src="./images/cookie.webp" alt="🍪" class="emoji">
+        <picture><source srcset="/images/webp/cookie.webp"><img src="/images/png/cookie.png" alt="🍪" class="emoji"></picture>
         <p>Для улучшения сайта мы вынуждены использовать куки и другие технологии. <a href="/cookies">Читать больше...</a></p>
         <button onclick="closeCookie()" class="agree">Я согласен</button>
     </div>
@@ -164,15 +163,15 @@
                     <h1 class="biggy">КТО МЫ?</h1>
                 </div>
                 <h2>Кто мы?</h2>
-                <img src="./images/who-we.webp" alt="🤨" class="emoji">
+                <picture><source srcset="/images/webp/who-we.webp"><img src="/images/png/who-we.png" alt="🤨" class="emoji"></picture>
                 <p class="who-we we wow fadeInUp">Наша студия состоит из небольшого количества работников, но зато
                     какие они профессионалы... Под вашу ситуацию и вкус подберем подходящую композицию или подарок и
                     упакуем все так, чтоб не стыдно было. Ну а подождать выполнения заказа вы можете на мягком диване
                     или прогулявшись по соседнему парку. Правда ждать долго не получится, мы справимся очень быстро. Но
                     мы также и доставляем в назначенное место и время.</p>
                 <div class="images">
-                    <img data-src="./images/fl1.webp" alt="flower" class="square lazyload s1 wow fadeInUp">
-                    <img data-src="./images/fl2.webp" alt="flower" class="square lazyload s2 wow fadeInUp">
+                    <picture><source srcset="/images/webp/fl1.webp"><img data-src="/images/png/fl1.png" alt="flower" class="square lazyload s1 wow fadeInUp"></picture>
+                    <picture><source srcset="/images/webp/fl2.webp"><img data-src="/images/png/fl2.png" alt="flower" class="square lazyload s2 wow fadeInUp"></picture>
                 </div>
                 <a class="link-to-product button wow fadeInUp" href="#product">
                     <p>Ассортимент</p>
@@ -188,10 +187,10 @@
                                     <h1 class="biggy hb">ПОЧЕМУ МЫ?</h1>
                                 </div>
                                 <h2>Почему мы?</h2>
-                                <img src="./images/hmmm.webp" alt="🤔" class="emoji">
+                                <picture><source srcset="/images/webp/hmmm.webp"><img src="/images/png/hmmm.png" alt="🤔" class="emoji"></picture>
                             </div>
                             <div class="video-div">
-                                <video poster="./images/poster.webp" autoplay muted loop>
+                                <video poster="./images/webp/poster.webp" autoplay muted loop>
                                     <source src="./videos/video.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -203,7 +202,7 @@
                                 многие хотят побывать — в Европе, а конкретнее, в Голландии. Естественно наши работники
                                 не оставят вас без своей улыбки и позволят пронаблюдать за всем процессом выполнения
                                 заказа. Но если вам лень, то мы сами привезем букет (в пределах МКАДа).</p>
-                            <img data-src="./images/fl3.webp" alt="flower" class="square lazyload s3 wow fadeInUp">
+                            <picture><source srcset="/images/webp/fl3.webp"><img data-src="/images/png/fl3.png" alt="flower" class="square lazyload s3 wow fadeInUp"></picture>
                         </div>
                         <div class="col-lg-12 clients why-div why-text wow fadeInUp">
                             <object class="quote" data="./images/quote.svg" type="image/svg+xml"></object>
@@ -218,7 +217,7 @@
                     <h1 class="biggy">БУКЕТЫ</h1>
                 </div>
                 <h2>Букеты</h2>
-                <img src="./images/product.webp" alt="😍" class="emoji margin">
+                <picture><source srcset="/images/webp/product.webp"><img src="/images/png/product.png" alt="😍" class="emoji margin"></picture>
                 <div class="container-fluid s2 common">
                     <div class="row goods-out">
                     </div>
@@ -227,7 +226,7 @@
                     <h1 class="biggy split">НОВОГОДНИЕ БУКЕТЫ</h1>
                 </div>
                 <h2>Новогодние букеты</h2>
-                <img src="./images/product.webp" alt="😍" class="emoji margin">
+                <picture><source srcset="/images/webp/product.webp"><img src="/images/png/product.png" alt="😍" class="emoji margin"></picture>
                 <div class="container-fluid s2">
                     <div class="row season-goods-out" id="season">
                     </div>
@@ -239,11 +238,11 @@
 					<h1 class="biggy">БАНКЕТНЫЕ ЗАЛЫ</h1>
 				</div>
 				<h2>Банкетные залы</h2>
-				<img src="./images/castle.webp" alt="🏰" class="emoji">
+				<picture><source srcset="/images/webp/castle.webp"><img src="/images/png/castle.png" alt="🏰" class="emoji"></picture>
 				<div class="container-fluid s2">
 					<div class="row">
 						<div class="item-2">
-							<img src="./images/template.webp" class="wow fadeInUp" alt="item-2">
+							<picture><source srcset="/images/webp/template.webp"><img src="/images/png/template.png" class="wow fadeInUp" alt="item-2"></picture>
 						</div>
 					</div>
 				</div>
@@ -258,7 +257,7 @@
                                     <h1 class="biggy">СОЦИАЛОЧКИ?</h1>
                                 </div>
                                 <h2>Социалочки?</h2>
-                                <img src="./images/socials.webp" alt="😯" class="emoji">
+                                <picture><source srcset="/images/webp/socials.webp"><img src="/images/png/socials.png" alt="😯" class="emoji"></picture>
                                 <p class="socials we wow fadeInUp">Не нашли, что искали? Тогда настало время напомнить
                                     вам про наш Инстаграм. Это кладовка, в которой найдутся самые разнообразные и
                                     странные букеты. *звук заворачивания букетов в обертку*.</p>
@@ -267,16 +266,16 @@
                                     <div class="container-fluid insta-photos-conatiner">
                                         <div class="row">
                                             <div class="col-lg-3 insta-photos-blocks">
-                                                <img src="/images/inst1.webp" alt="" class="insta-photos">
+                                                <picture><source srcset="/images/webp/inst1.webp"><img src="/images/png/inst1.png" alt="" class="insta-photos"></picture>
                                             </div>
                                             <div class="col-lg-3 insta-photos-blocks">
-                                                <img src="/images/inst2.webp" alt="" class="insta-photos">
+                                                <picture><source srcset="/images/webp/inst2.webp"><img src="/images/png/inst2.png" alt="" class="insta-photos"></picture>
                                             </div>
                                             <div class="col-lg-3 insta-photos-blocks">
-                                                <img src="/images/inst3.webp" alt="" class="insta-photos">
+                                                <picture><source srcset="/images/webp/inst3.webp"><img src="/images/png/inst3.png" alt="" class="insta-photos"></picture>
                                             </div>
                                             <div class="col-lg-3 insta-photos-blocks">
-                                                <img src="/images/inst4.webp" alt="" class="insta-photos">
+                                                <picture><source srcset="/images/webp/inst4.webp"><img src="/images/png/inst4.png" alt="" class="insta-photos"></picture>
                                             </div>
                                         </div>
                                     </div>
@@ -295,7 +294,7 @@
                                     <h1 class="biggy">ГДЕ МЫ?</h1>
                                 </div>
                                 <h2>Где мы?</h2>
-                                <img src="./images/where-we.webp" alt="😎" class="emoji">
+                                <picture><source srcset="/images/webp/where-we.webp"><img src="/images/png/where-we.png" alt="😎" class="emoji"></picture>
                                 <p class="where-we we wow fadeInUp">И наконец мы готовы раскрыть вам тайну. Мы
                                     находимся в Центре Международной Торговли (ЦМТ) в относительной близости к центру
                                     Москвы. Все для того, чтобы вам было недалеко и приятно. Рядом есть парк "Красная
@@ -314,10 +313,7 @@
                                     </p>
                                 </div>
                                 <div class="wtc inline wow fadeInUp"></div>
-                                <img src="./images/wtcmsc.webp" alt="" class="inline wow fadeInUp">
-                                <!-- <iframe src="https://yandex.ru/map-widget/v1/-/CBudA6bn1A" class="iframe inline wow fadeInUp"
-                                    frameborder="0" allowfullscreen="true">
-                                </iframe> -->
+                                <picture><source srcset="/images/webp/wtcmsk.webp" type="img/webp"><img src="/images/png/wtcmsc.png" alt="" class="inline wow fadeInUp"></picture>
                             </div>
                         </div>
                         <div class="col-lg-12 map">

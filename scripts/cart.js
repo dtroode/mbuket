@@ -7,7 +7,7 @@ function loadCart() {
         seasonCart = JSON.parse(getCookie('seasonCart'));
         showCart();
     } else {
-        $('.cart-place').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/cart-empty.webp" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
+        $('.cart-place').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><picture><source srcset="/images/webp/cart-empty.webp" type="img/webp"><img class="emoji" src="/images/png/cart-empty.png" alt="😮"><picture><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
         $('.total').css({"display": "none"});
         getCookie('cart');
         deleteCookie('cart');
@@ -44,10 +44,10 @@ function showCart() {
         $.getJSON('/goods.json', function(data) {
             var goods = data;
             var out = '';
-            out += '<div class="big-div"><h1 class="biggy">КОРЗИНА</h1></div><div class="zind"><h2>Корзина</h2><img class="emoji emb" src="/images/cart.webp" alt="😉"></div>'
+            out += '<div class="big-div"><h1 class="biggy">КОРЗИНА</h1></div><div class="zind"><h2>Корзина</h2><picture><source srcset="/images/webp/cart.webp" type="img/webp"><img class="emoji emb" src="/images/png/cart.png" alt="😉"></picture></div>'
             for (var id in cart) {
                 out += '<div class="item">';
-                out += '<img src="/'+ goods[id].img +'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + goods[id].description + '">';
+                out += '<img src="/'+ goods[id].img +'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + goods[id].name + '">';
                 out += '<p class="name wow fadeInUp">'+ goods[id].name +'</p>';
                 out += '<p class="cost">'+ cart[id] * goods[id].cost + ' ₽'+'</p>';
                 out += '<div class="button-container wow fadeInUp">';
@@ -59,7 +59,7 @@ function showCart() {
                 out += '<hr>';
                 out += '</div>';
                 num += goods[id].cost * cart[id];
-                $('.total').html('<h2>Итого:</h2><img class="emoji emb" src="/images/slightly.webp" alt="🙂"><p class="name pmb">' + num + ' рублей</p>');
+                $('.total').html('<h2>Итого:</h2><picture><source srcset="/images/webp/slightly.webp" type="img/webp"><img class="emoji emb" src="/images/png/slightly.png" alt="🙂"></pciture><p class="name pmb">' + num + ' рублей</p>');
             }
             $('.cart-place').html(out);
             $('.del-goods').on('click', deleteGoods);
@@ -69,10 +69,10 @@ function showCart() {
         $.getJSON('/seasongoods.json', function(data) {
             var seasonGoods = data;
             var out = '';
-            out += '<div class="big-div"><h1 class="biggy">НОВОГОДНЯЯ КОРЗИНА</h1></div><div class="zind"><h2>Новогодняя корзина</h2><img class="emoji emb" src="/images/cart.webp" alt="😉"></div>'
+            out += '<div class="big-div"><h1 class="biggy">НОВОГОДНЯЯ КОРЗИНА</h1></div><div class="zind"><h2>Новогодняя корзина</h2><picture><source srcset="/images/webp/cart.webp" type="img/webp"><img class="emoji emb" src="/images/png/cart.png" alt="😉"></picture></div>'
             for (var id in seasonCart) {
                 out += '<div class="item">';
-                out += '<img src="/'+seasonGoods[id].img +'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + seasonGoods[id].description + '">';
+                out += '<img src="/'+seasonGoods[id].img +'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + seasonGoods[id].name + '">';
                 out += '<p class="name wow fadeInUp">'+seasonGoods[id].name +'</p>';
                 out += '<p class="cost">'+seasonCart[id] * seasonGoods[id].cost + ' ₽'+'</p>';
                 out += '<div class="button-container wow fadeInUp">';
@@ -84,7 +84,7 @@ function showCart() {
                 out += '<hr>';
                 out += '</div>';
                 num += seasonGoods[id].cost * seasonCart[id];
-                $('.total').html('<h2>Итого:</h2><img class="emoji emb" src="/images/slightly.webp" alt="🙂"><p class="name pmb">' + num + ' рублей</p>');
+                $('.total').html('<h2>Итого:</h2><picture><source srcset="/images/webp/slightly.webp" type="img/webp"><img class="emoji emb" src="/images/png/slightly.png" alt="🙂"></pciture><p class="name pmb">' + num + ' рублей</p>');
             }
             $('.season-cart-place').html(out);
             $('.del-season-goods').on('click', deleteSeasonGoods);
@@ -95,10 +95,10 @@ function showCart() {
         $.getJSON('/goods.json', function(data) {
             var goods = data;
             var out = '';
-            out += '<div class="big-div"><h1 class="biggy">КОРЗИНА</h1></div><div class="zind"><h2>Корзина</h2><img class="emoji emb" src="/images/cart.webp" alt="😉"></div>'
+            out += '<div class="big-div"><h1 class="biggy">КОРЗИНА</h1></div><div class="zind"><h2>Корзина</h2><picture><source srcset="/images/webp/cart.webp" type="img/webp"><img class="emoji emb" src="/images/png/cart.png" alt="😉"></picture></div>'
             for (var id in cart) {
                 out += '<div class="item">';
-                out += '<img src="/'+ goods[id].img +'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + goods[id].description + '">';
+                out += '<img src="/'+ goods[id].img +'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + goods[id].name + '">';
                 out += '<p class="name wow fadeInUp">'+ goods[id].name +'</p>';
                 out += '<p class="cost">'+ cart[id] * goods[id].cost + ' ₽'+'</p>';
                 out += '<div class="button-container wow fadeInUp">';
@@ -110,7 +110,7 @@ function showCart() {
                 out += '<hr>';
                 out += '</div>';
                 num += goods[id].cost * cart[id];
-                $('.total').html('<h2>Итого:</h2><img class="emoji emb" src="/images/slightly.webp" alt="🙂"><p class="name pmb">' + num + ' рублей</p>');
+                $('.total').html('<h2>Итого:</h2><picture><source srcset="/images/webp/slightly.webp" type="img/webp"><img class="emoji emb" src="/images/png/slightly.png" alt="🙂"></pciture><p class="name pmb">' + num + ' рублей</p>');
             }
             $('.cart-place').html(out);
             $('.del-goods').on('click', deleteGoods);
@@ -121,10 +121,10 @@ function showCart() {
         $.getJSON('/seasongoods.json', function(data) {
             var seasonGoods = data;
             var out = '';
-            out += '<div class="big-div"><h1 class="biggy">НОВОГОДНЯЯ КОРЗИНА</h1></div><div class="zind"><h2>Новогодняя корзина</h2><img class="emoji emb" src="/images/cart.webp" alt="😉"></div>'
+            out += '<div class="big-div"><h1 class="biggy">НОВОГОДНЯЯ КОРЗИНА</h1></div><div class="zind"><h2>Новогодняя корзина</h2><picture><source srcset="/images/webp/cart.webp" type="img/webp"><img class="emoji emb" src="/images/png/cart.png" alt="😉"></picture></div>'
             for (var id in seasonCart) {
                 out += '<div class="item">';
-                out += '<img src="/'+seasonGoods[id].img +'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + seasonGoods[id].description + '">';
+                out += '<img src="/'+seasonGoods[id].img +'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + seasonGoods[id].name + '">';
                 out += '<p class="name wow fadeInUp">'+seasonGoods[id].name +'</p>';
                 out += '<p class="cost">'+seasonCart[id] * seasonGoods[id].cost + ' ₽'+'</p>';
                 out += '<div class="button-container wow fadeInUp">';
@@ -136,7 +136,7 @@ function showCart() {
                 out += '<hr>';
                 out += '</div>';
                 num += seasonGoods[id].cost * seasonCart[id];
-                $('.total').html('<h2>Итого:</h2><img class="emoji emb" src="/images/slightly.webp" alt="🙂"><p class="name pmb">' + num + ' рублей</p>');
+                $('.total').html('<h2>Итого:</h2><picture><source srcset="/images/webp/slightly.webp" type="img/webp"><img class="emoji emb" src="/images/png/slightly.png" alt="🙂"></pciture><p class="name pmb">' + num + ' рублей</p>');
             }
             $('.season-cart-place').html(out);
             $('.del-season-goods').on('click', deleteSeasonGoods);
@@ -144,7 +144,7 @@ function showCart() {
             $('.minus-season-goods').on('click', minusSeasonGoods);
         });
     } else {
-        $('.cart-place').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/cart-empty.webp" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
+        $('.cart-place').html('<div class="big-div"><h1 class="biggy">КОРЗИНА ПУСТА</h1></div><div class="zind"><h2>Корзина пуста</h2><picture><source srcset="/images/webp/cart-empty.webp" type="img/webp"><img class="emoji" src="/images/png/cart-empty.png" alt="😮"><picture><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
         $('.total').css({"display": "none"});
         deleteCookie('cart');
         deleteCookie('seasonCart');
@@ -224,11 +224,10 @@ function imageClick(e) {
     var src = img.attr('src');
     var name = $(e).next().text();
     var button = $(e).next().next().next().children().attr('data-id');
-    var description = img.attr('alt');
     $("body").append("<div class='popup'>" +
         "<div class='popup_bg'>" +
         "<img src='" + src + "' class='popup_img'>" +
-        "<div class='popup_description'><h3>" + name + "</h3><p>" + description + "</p><button data-id='" + button + "' class='del-goods remove-fr-cart cart-func'>Удалить из корзины</button></div></div></div>");
+        "<div class='popup_description'><h3>" + name + "</h3><button data-id='" + button + "' class='del-goods remove-fr-cart cart-func'>Удалить из корзины</button></div></div></div>");
     $(".popup").fadeIn(200);
     $('.popup_bg').on('click', closeImage);
     $(".popup_description").on('click', preventCloseImage);

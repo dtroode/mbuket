@@ -16,10 +16,9 @@ function seasonTopInit() {
 function goodsOut(data) {
     out = '';
     for (var key in data) {
-        description = '';
         name = '';
         out += '<div class="item">';
-        out += '<img data-src="/' + data[key].img + '" class="wow fadeInUp image lazyload" alt="' + data[key].description + '" onclick="imageClick(this)">';
+        out += '<img data-src="/' + data[key].img + '" class="wow fadeInUp image lazyload" alt="' + data[key].name + '" onclick="imageClick(this)">';
         out += '<p class="name wow fadeInUp">' + data[key].name + '</p>';
         out += '<p class="cost">'+ data[key].cost+ ' ₽'+'</p>';
         out += '<button class="add-to-cart cart-func wow fadeInUp" onclick="showLink()" data-id="' + key + '">Добавить в корзину</button>';
@@ -33,10 +32,9 @@ function goodsOut(data) {
 function seasonGoodsOut(data) {
     out = '';
     for (var key in data) {
-        description = '';
         name = '';
         out += '<div class="item">';
-        out += '<img data-src="/' + data[key].img + '" class="wow fadeInUp image lazyload" alt="' + data[key].description + '" onclick="imageClick(this)">';
+        out += '<img data-src="/' + data[key].img + '" class="wow fadeInUp image lazyload" alt="' + data[key].name + '" onclick="imageClick(this)">';
         out += '<p class="name wow fadeInUp">' + data[key].name + '</p>';
         out += '<p class="cost">'+ data[key].cost+ ' ₽'+'</p>';
         out += '<button class="add-to-season-cart cart-func wow fadeInUp" onclick="showLink()" data-id="' + key + '">Добавить в корзину</button>';
@@ -50,10 +48,9 @@ function seasonGoodsOut(data) {
 function seasonGoodsTopOut(data) {
     out = '';
     for (var key in data) {
-        description = '';
         name = '';
         out += '<a href="#season" class="scroll-to-season">';
-        out += '<img src="/' + data[key].img + '" class="square" alt="' + data[key].description + '" onclick="imageClick(this)">';
+        out += '<img src="/' + data[key].img + '" class="square" alt="' + data[key].name + '" onclick="imageClick(this)">';
         out += '<p data-id="' + key + '">' + data[key].name + '</p>';
         out += '</a>';
         console.log(data);
@@ -189,11 +186,10 @@ function imageClick(e) {
     var src = img.attr('src');
     var name = $(e).next().text();
     var button = $(e).next().next().attr('data-id');
-    var description = img.attr('alt');
     $("body").append("<div class='popup'>" +
         "<div class='popup_bg'>" +
         "<img src='" + src + "' class='popup_img'>" +
-        "<div class='popup_description'><h3>" + name + "</h3><p>" + description + "</p><button class='add-to-cart cart-func wow fadeInUp' onclick='showLink()' data-id='" + button + "'>Добавить в корзину</button></div></div></div>");
+        "<div class='popup_description'><h3>" + name + "</h3><button class='add-to-cart cart-func wow fadeInUp' onclick='showLink()' data-id='" + button + "'>Добавить в корзину</button></div></div></div>");
     $(".popup").fadeIn(200);
     $(".popup_bg").on('click', closeImage);
     $(".popup_description").on('click', preventCloseImage);
