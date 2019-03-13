@@ -1,5 +1,6 @@
 $('body').ready(function() {
-    let images = $('picture');
+    let images = $('picture') + $('img');
+    console.log(images);
     let imagesTotalCount = images.length;
     let imagesLoadedCount = 0;
     let preloader = $('#page-preloader');
@@ -7,8 +8,6 @@ $('body').ready(function() {
     if (!preloader.hasClass('preloader-done')) {
         $('html').css({"overflow-y": "hidden"})
     }
-
-    console.log(imagesTotalCount);
 
     function imageLoaded() {
         imagesLoadedCount++;

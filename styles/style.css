@@ -22,15 +22,22 @@
     transition: all ease-in 0.2s;
 }
 *::selection {
-    background: var(--pink);
+    background-color: var(--pink);
     color: var(--gray);
 }
 *::-moz-selection {
-    background: var(--pink);
+    background-color: var(--pink);
     color: var(--gray);
 }
 html {
     overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+    width: 1em;
+    background-color: var(--white);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--red);
 }
 a {
     color: var(--gray);
@@ -177,7 +184,7 @@ svg:hover {
     color: var(--gray);
 }
 .subpages .main p {
-    background: var(--red);
+    background-color: var(--red);
 }
 .subpages .links svg {
     fill: var(--gray);
@@ -200,7 +207,7 @@ svg:hover {
 }
 .cookie {
     display: none;
-    background: var(--gray);
+    background-color: var(--gray);
     box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
     padding: 25px;
     color: var(--pink);
@@ -232,7 +239,7 @@ svg:hover {
 }
 .agree {
     box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
-    background: var(--red);
+    background-color: var(--red);
     border: 0;
     height: 50px;
     width: 150px;
@@ -247,7 +254,7 @@ svg:hover {
 .next {
     width: 50px;
     height: 50px;
-    background: var(--gray);
+    background-color: var(--gray);
     float: left;
     box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
 }
@@ -265,7 +272,7 @@ svg:hover {
     fill: var(--gray);
 }
 .clients {
-    background: url(/images/png/dottedback.png);
+    background-image: url("/images/png/dottedback.png");
     background-size: contain;
     background-position: center center;
 }
@@ -325,7 +332,7 @@ svg:hover {
     right: 40px;
     z-index: 100;
     box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
-    background: var(--red);
+    background-color: var(--red);
     border: 5px solid var(--gray);
     padding: 0 15px;
     visibility: visible;
@@ -369,20 +376,73 @@ svg:hover {
 .link-to-product:hover p {
     color: var(--gray);
 }
+.cart-func {
+    position: relative;
+    font-size: 125%;
+    border: 4px solid var(--gray);
+    background-color: var(--red);
+    color: var(--gray);
+    height: 50px;
+    padding: 0 10px;
+    line-height: 42px;
+    display: inline-block;
+}
+.cart-func:hover {
+    border-bottom: 46px solid var(--gray);
+    color: var(--red);
+}
+.cart-func:active {
+    outline: 0;
+}
+.add-to-cart, .add-to-season-cart {
+    margin: 0 0 30px 0;
+    box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
+    position: absolute;
+    bottom: 30px;
+}
+.button-container {
+    box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
+    border: 4px solid var(--gray);
+    height: 50px;
+    margin: 0 0 30px 0;
+    position: absolute;
+    bottom: 30px;
+}
+.button-container .cart-func {
+    border: none;
+    height: 42px;
+    display: inline-block;
+    line-height: 42px;
+    vertical-align: top;
+}
+.button-container .cart-func:hover {
+    border-bottom: 42px solid var(--gray);
+}
+.number {
+    font-size: 125%;
+    width: 50px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    background-color: var(--gray);
+    display: inline-block;
+    margin: 0;
+    color: var(--red);
+}
 .image-main {
-    background: url(/images/png/flower1.png);
+    background-image: url("/images/png/flower1.png");
 }
 .image-error {
-    background: url(/images/png/404back.png);
+    background-image: url("/images/png/404back.png");
 }
 .image-cookies {
-    background: url(/images/png/cookieback.png);
+    background-image: url("/images/png/cookieback.png");
 }
 .image-cart {
-    background: url(/images/png/cartback.png);
+    background-image: url("/images/png/cartback.png");
 }
 .image-div-2 {
-    background: url(/images/png/flower2.png);
+    background-image: url("/images/png/flower2.png");
 }
 .id {
     background-attachment: fixed;
@@ -423,26 +483,34 @@ svg:hover {
 .main h2 {
     margin-bottom: 0px;
 }
-.product {
+.product, .season-product {
     padding: 80px;
-    background: var(--pink);
+}
+.product {
+    background-color: var(--pink);
+}
+.season-product {
+    background-color: var(--pink);
+    background-image: url("/images/Seasonback.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .second {
     padding: 80px;
-    background: var(--red);
+    background-color: var(--red);
     color: var(--gray);
 }
 .third {
-    background: var(--gray);
+    background-color: var(--gray);
 }
 .fourth {
-    background: var(--red);
+    background-color: var(--red);
 }
 .fourth, .fifth {
     color: var(--gray);
 }
 .fifth .content {
-    background: var(--white);
+    background-color: var(--white);
 }
 .why-header { 
     position: absolute;
@@ -474,6 +542,7 @@ svg:hover {
     left: 20vw;
 }
 .biggy {
+    text-transform: uppercase;
     display: block;
     white-space: nowrap;
     font-size: 2000%;
@@ -511,7 +580,7 @@ svg:hover {
 .account-link {
     text-align: center;
     display: block;
-    background: var(--pink);
+    background-color: var(--pink);
     width: 100%;
     font-size: 300%;
 }
@@ -572,7 +641,7 @@ svg:hover {
     margin: 40px 0;
     box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
     color: var(--red);
-    background: var(--gray);
+    background-color: var(--gray);
     width: 200px;
     height: 50px;
     float: left;
@@ -609,7 +678,7 @@ svg:hover {
     left: 0;
     height: 70vh;
     padding: 0;
-    background: var(--gray);
+    background-color: var(--gray);
 }
 .map-container, .map-background, #map {
     height: 70vh;
@@ -628,7 +697,7 @@ svg:hover {
 .map-background {
     position: absolute;
     width: 100%;
-    background: url(/images/png/wtc.png);
+    background-image: url("/images/png/wtc.png");
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -643,7 +712,7 @@ svg:hover {
     z-index: 2;
 }
 .blur {
-    background: url(/images/png/wtcblur.png);
+    background-image: url("/images/png/wtcblur.png");
     position: relative;
     z-index: 2;
     width: 610px;
@@ -652,7 +721,7 @@ svg:hover {
     padding: 25px 15px;
 }
 .wtc {
-    background: url(/images/png/wtc.png);
+    background-image: url("/images/png/wtc.png");
 }
 .blur, .wtc {
     background-attachment: fixed;
@@ -683,7 +752,7 @@ svg:hover {
     z-index: 2;
 }
 .back-to-main {
-    background: var(--gray);
+    background-color: var(--gray);
     color: var(--red);
     height: 50px;
     padding: 0 15px;
@@ -707,17 +776,6 @@ svg:hover {
     line-height: 37.5px;
     letter-spacing: -0.01rem;
 }
-.number {
-    font-size: 125%;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    background: var(--gray);
-    display: inline-block;
-    margin: 0;
-    color: var(--red);
-}
 .cost {
     font-size: 150%;
     opacity: 0.8;
@@ -737,7 +795,7 @@ svg:hover {
 }
 .send-email {
     box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
-    background: var(--gray);
+    background-color: var(--gray);
     border: none;
     height: 50px;
     width: 300px;
@@ -749,43 +807,10 @@ svg:hover {
 .remove-fr-cart {
     width: 105px;
 }
-.cart-func {
-    background: var(--red);
-    color: var(--gray);
-    height: 50px;
-    font-size: 125%;
-    border: none;
-    padding: 0 10px;
-    line-height: 50px;
-    display: inline-block;
-    position: relative;
-}
-.add-to-cart, .add-to-season-cart {
-    margin: 0 0 30px 0;
-    box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
-    position: absolute;
-    bottom: 30px;
-}
-.cart-func:hover {
-    border-bottom: 50px solid var(--gray);
-    color: var(--red);
-}
-.cart-func:active {
-    background: var(--pink);
-    outline: none;
-}
 .plus-goods, .minus-goods, .plus-season-goods, .minus-season-goods {
     width: 50px;
 }
-.button-container {
-    box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
-    height: 50px;
-    width: 255px;
-    margin: 0 0 30px 0;
-    position: absolute;
-    bottom: 30px;
-}
-.cart-place, .common {
+.cart-place {
     margin-bottom: 80px;
 }
 .empty-cart {
@@ -811,7 +836,7 @@ svg:hover {
     top: 40vh;
     left: 25vw;
     right: 25vw;
-    background: url(/images/png/alert.png);
+    background-image: url("/images/png/alert.png");
     background-position: center center;
     background-size: cover;
 }
@@ -827,7 +852,7 @@ svg:hover {
     top: 20vh;
     left: 25vw;
     right: 25vw;
-    background: url(/images/png/thanks.png);
+    background-image: url("/images/png/thanks.png");
     background-position: center center;
     background-size: cover;
 }
@@ -882,7 +907,7 @@ svg:hover {
 }
 .overlay, .thanks-overlay, .alert-div-overlay {
     position: fixed;
-    background: var(--gray);
+    background-color: var(--gray);
     top: 0;
     bottom: 0;
     left: 0;
@@ -973,7 +998,7 @@ svg:hover {
 .popup_description {
     position: relative;
     z-index: 2;
-    background: var(--red);
+    background-color: var(--red);
     display: inline-block;
     height: 600px;
     width: 300px;
@@ -1012,7 +1037,7 @@ svg:hover {
 }
 .send-email {
     box-shadow: 0 12px 70px 4px rgba(0, 0, 0, 0.56);
-    background: var(--gray);
+    background-color: var(--gray);
     border: none;
     height: 50px;
     width: 300px;
@@ -1066,6 +1091,13 @@ svg:hover {
         overflow-x: hidden;
         width: 100%;
     }
+    body::-webkit-scrollbar {
+        width: unset;
+        background-color: unset;
+    }
+    body::-webkit-scrollbar-thumb {
+        background-color: unset;
+    }
     h1 {
         display: block;
         font-size: 350%;
@@ -1103,15 +1135,18 @@ svg:hover {
         margin: 0;
         padding: 0 5vw 5vw 5vw;
         display: inline-block;
-        background: url(/images/png/flower1.png);
+        background-image: url("/images/png/flower1.png");
         background-size: cover;
         background-repeat: no-repeat;
     }
+    .main-cart {
+        background-image: url("/images/png/cartback.png");
+    }
     .main-error {
-        background: url(/images/png/404back.png);
+        background-image: url("/images/png/404back.png");
     }
     .main-cookies {
-        background: url(/images/png/cookieback.png);
+        background-image: url("/images/png/cookieback.png");
     }
     .main p {
         position: static;
@@ -1152,7 +1187,7 @@ svg:hover {
         margin: 20px 0;
         line-height: 25px;
     }
-    .second, .product {
+    .second, .product, .season-product {
         padding: 5vw;
     }
     .why-header, .main-content {
@@ -1314,8 +1349,9 @@ svg:hover {
     }
     .button-container {
         position: static;
+        width: 263px;
     }
-    .cart-place, .common {
+    .cart-place {
         margin-bottom: 5vw;
     }
     .account-link {

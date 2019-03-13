@@ -56,17 +56,18 @@
     <script>
         new WOW().init();
                 
-        $(window).resize(function() {
-            $(".main h1").ready(function() {
-                if ($(window).width() < 992) {
-                    var headerHeight = $(".main h1").height();
-                    var margin = ($(window).height() - headerHeight)/2;
-                    $(".main h1").css({"margin": margin + "px 0 " + margin +"px 0"})
-                } else {
-                    $(".main h1").css({"margin": "0"})
-                }
-            })
-        })
+        function changeMarginsForHeader() {
+            if ($(window).width() < 992) {
+                var headerHeight = $(".main h1").height();
+                var margin = ($(window).height() - headerHeight)/2;
+                $(".main h1").css({"margin": margin + "px 0 " + margin +"px 0"})
+            } else {
+                $(".main h1").css({"margin": "0"})
+            }
+        }
+        
+        $(window).ready(changeMarginsForHeader);
+        $(window).resize(changeMarginsForHeader);
     </script>
 
     <!--Icons-->
@@ -166,7 +167,7 @@
             </div>
             <div class="col-lg-8 full second" id="second">
                 <div class="big-div">
-                    <h1 class="biggy">КТО МЫ?</h1>
+                    <h1 class="biggy">Кто мы?</h1>
                 </div>
                 <h2>Кто мы?</h2>
                 <picture><source srcset="/images/webp/who-we.webp"><img src="/images/png/who-we.png" alt="🤨" class="emoji"></picture>
@@ -190,7 +191,7 @@
                         <div class="col-lg-12 why-div why-video">
                             <div class="col-lg-12 why-div why-header">
                                 <div class="big-div hb">
-                                    <h1 class="biggy hb">ПОЧЕМУ МЫ?</h1>
+                                    <h1 class="biggy hb">Почему мы?</h1>
                                 </div>
                                 <h2>Почему мы?</h2>
                                 <picture><source srcset="/images/webp/hmmm.webp"><img src="/images/png/hmmm.png" alt="🤔" class="emoji"></picture>
@@ -220,28 +221,30 @@
             </div>
             <div class="col-lg-12 product full" id="product">
                 <div class="big-div">
-                    <h1 class="biggy">БУКЕТЫ</h1>
+                    <h1 class="biggy">Букеты</h1>
                 </div>
                 <h2>Букеты</h2>
                 <picture><source srcset="/images/webp/product.webp"><img src="/images/png/product.png" alt="😍" class="emoji margin"></picture>
-                <div class="container-fluid s2 common">
+                <div class="container-fluid s2">
                     <div class="row goods-out">
                     </div>
                 </div>
+            </div>
+            <div class="col-lg-12 season-product" id="season">
                 <div class="big-div">
-                    <h1 class="biggy split">НОВОГОДНИЕ БУКЕТЫ</h1>
+                    <h1 class="biggy split"><span class="season-name"></span> букеты</h1>
                 </div>
-                <h2>Новогодние букеты</h2>
+                <h2><span class="season-name"></span> букеты</h2>
                 <picture><source srcset="/images/webp/product.webp"><img src="/images/png/product.png" alt="😍" class="emoji margin"></picture>
                 <div class="container-fluid s2">
-                    <div class="row season-goods-out" id="season">
+                    <div class="row season-goods-out">
                     </div>
                 </div>
             </div>
             <!--
 			<div class="col-lg-12 full second-prod">
 				<div class="big-div">
-					<h1 class="biggy">БАНКЕТНЫЕ ЗАЛЫ</h1>
+					<h1 class="biggy">Банкетные залы</h1>
 				</div>
 				<h2>Банкетные залы</h2>
 				<picture><source srcset="/images/webp/castle.webp"><img src="/images/png/castle.png" alt="🏰" class="emoji"></picture>
@@ -260,7 +263,7 @@
                         <div class="col-lg-12 content">
                             <div class="main-content">
                                 <div class="big-div">
-                                    <h1 class="biggy">СОЦИАЛОЧКИ?</h1>
+                                    <h1 class="biggy">Социалочки?</h1>
                                 </div>
                                 <h2>Социалочки?</h2>
                                 <picture><source srcset="/images/webp/socials.webp"><img src="/images/png/socials.png" alt="😯" class="emoji"></picture>
@@ -297,7 +300,7 @@
                         <div class="col-lg-12 content">
                             <div class="main-content">
                                 <div class="big-div">
-                                    <h1 class="biggy">ГДЕ МЫ?</h1>
+                                    <h1 class="biggy">Где мы?</h1>
                                 </div>
                                 <h2>Где мы?</h2>
                                 <picture><source srcset="/images/webp/where-we.webp"><img src="/images/png/where-we.png" alt="😎" class="emoji"></picture>

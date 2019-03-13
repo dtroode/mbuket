@@ -1,5 +1,21 @@
 var cart = {};
 var seasonCart = {};
+var todayDate = new Date();
+var todayMonth = todayDate.getMonth()+1;
+
+function logSeason() {
+    var todayBouquets = '';
+    if (todayMonth == 12 || todayMonth <= 2) {
+        todayBouquets = 'Зимние'
+    } else if (todayMonth >= 3 || todayMonth <= 5) {
+        todayBouquets = 'Весенние'
+    } else if (todayMonth >= 6 || todayMonth <= 8 ) {
+        todayBouquets = 'Летние'
+    } else {
+        todayBouquets = 'Осенние'
+    }
+    $('.season-name').append(todayBouquets);
+}
 
 function init() {
     $.getJSON("goods.json", goodsOut);
@@ -20,7 +36,7 @@ function goodsOut(data) {
         out += '<div class="item">';
         out += '<img data-src="/' + data[key].img + '" class="wow fadeInUp image lazyload" alt="' + data[key].name + '" onclick="imageClick(this)">';
         out += '<p class="name wow fadeInUp">' + data[key].name + '</p>';
-        out += '<p class="cost">'+ data[key].cost+ ' ₽'+'</p>';
+        out += '<p class="cost name wow fadeInUp">'+ data[key].cost+ ' ₽'+'</p>';
         out += '<button class="add-to-cart cart-func wow fadeInUp" onclick="showLink()" data-id="' + key + '">Добавить в корзину</button>';
         out += '<hr>';
         out += '</div>';
@@ -36,7 +52,7 @@ function seasonGoodsOut(data) {
         out += '<div class="item">';
         out += '<img data-src="/' + data[key].img + '" class="wow fadeInUp image lazyload" alt="' + data[key].name + '" onclick="imageClick(this)">';
         out += '<p class="name wow fadeInUp">' + data[key].name + '</p>';
-        out += '<p class="cost">'+ data[key].cost+ ' ₽'+'</p>';
+        out += '<p class="cost name wow fadeInUp">'+ data[key].cost+ ' ₽'+'</p>';
         out += '<button class="add-to-season-cart cart-func wow fadeInUp" onclick="showLink()" data-id="' + key + '">Добавить в корзину</button>';
         out += '<hr>'
         out += '</div>';
@@ -216,6 +232,8 @@ $(document).ready(function() {
     init();
     seasonInit();
     seasonTopInit();
+    logSeason();
+    seasonDate();
     loadCart();
     loadSeasonCart();
     showPolicyQuestion();
