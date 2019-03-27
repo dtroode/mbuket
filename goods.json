@@ -3,294 +3,294 @@
     "name": "Букет \"Весенняя свежесть\"",
     "cost": 5000,
     "order": 1,
-    "img" : "images/i1.png"
+    "img" : "images/bouquets/i1.jpg"
   },
   "Краски природы": {
     "name": "Букет \"Краски природы\"",
     "cost": 7000,
     "order": 2,
-    "img" : "images/i2.png"
+    "img" : "images/bouquets/i2.jpg"
   },
   "Светлые чувства": {
     "name": "Букет \"Светлые чувства\"",
     "cost": 8000,
     "order": 3,
-    "img" : "images/i3.png"
+    "img" : "images/bouquets/i3.jpg"
   },
   "Летняя радость": {
     "name": "Букет \"Летняя радость\"",
     "cost": 5000,
     "order": 4,
-    "img" : "images/i4.png"
+    "img" : "images/bouquets/i4.jpg"
   },
   "Ночное сверкание": {
     "name": "Букет \"Ночное сверкание\"",
     "cost": 6000,
     "order": 5,
-    "img" : "images/i5.png"
+    "img" : "images/bouquets/i5.jpg"
   },
   "Нежность природы": {
     "name": "Букет \"Нежность природы\"",
     "cost": 5000,
     "order": 6,
-    "img" : "images/i6.png"
+    "img" : "images/bouquets/i6.jpg"
   },
   "Блеск бриллиантов": {
     "name": "Букет \"Блеск бриллиантов\"",
     "cost": 5000,
     "order": 7,
-    "img" : "images/i7.png"
+    "img" : "images/bouquets/i7.jpg"
   },
   "Красно-белый дуэт": {
     "name": "Букет \"Красно-белый дуэт\"",
     "cost": 5000,
     "order": 8,
-    "img" : "images/i8.png"
+    "img" : "images/bouquets/i8.jpg"
   },
   "Свежая поляна": {
     "name": "Букет \"Свежая поляна\"",
     "cost": 5000,
     "order": 9,
-    "img" : "images/i9.png"
+    "img" : "images/bouquets/i9.jpg"
   },
   "Алая любовь": {
     "name": "Букет \"Алая любовь\"",
     "cost": 5000,
     "order": 10,
-    "img" : "images/i10.png"
+    "img" : "images/bouquets/i10.jpg"
   },
   "Летнее пробуждение": {
     "name": "Букет \"Летнее пробуждение\"",
     "cost": 5000,
     "order": 11,
-    "img" : "images/i11.png"
+    "img" : "images/bouquets/i11.jpg"
   },
   "Утренняя радость": {
     "name": "Букет \"Утренняя радость\"",
     "cost": 5000,
     "order": 12,
-    "img" : "images/i12.png"
+    "img" : "images/bouquets/i12.jpg"
   },
   "Цветочный карнавал": {
     "name": "Букет \"Цветочный карнавал\"",
     "cost": 5000,
     "order": 13,
-    "img" : "images/i13.png"
+    "img" : "images/bouquets/i13.jpg"
   },
   "Яркое наслаждение": {
     "name": "Букет \"Яркое наслаждение\"",
     "cost": 5000,
     "order": 14,
-    "img" : "images/i14.png"
+    "img" : "images/bouquets/i14.jpg"
   },
   "Весенняя краса": {
     "name": "Букет \"Весенняя краса\"",
     "cost": 5000,
     "order": 15,
-    "img" : "images/i15.png"
+    "img" : "images/bouquets/i15.jpg"
   },
   "В ожидании лета": {
     "name": "Букет \"В ожидании лета\"",
     "cost": 5000,
     "order": 16,
-    "img" : "images/i16.png"
+    "img" : "images/bouquets/i16.jpg"
   },
   "Первые лучи": {
     "name": "Букет \"Первые лучи\"",
     "cost": 5000,
     "order": 17,
-    "img" : "images/i17.png"
+    "img" : "images/bouquets/i17.jpg"
   },
   "Подарок природы": {
     "name": "Композиция \"По&shyдарок природы\"",
     "cost": 5000,
     "order": 18,
-    "img" : "images/i18.png"
+    "img" : "images/bouquets/i18.jpg"
   },
   "Насыщенные выходные": {
     "name": "Букет \"Насыщен&shyные выходные\"",
     "cost": 5000,
     "order": 19,
-    "img" : "images/i19.png"
+    "img" : "images/bouquets/i19.jpg"
   },
   "Лесная полянка": {
     "name": "Букет \"Лесная полянка\"",
     "cost": 5000,
     "order": 20,
-    "img" : "images/i20.png"
+    "img" : "images/bouquets/i20.jpg"
   },
   "Женская нежность": {
     "name": "Букет \"Женская нежность\"",
     "cost": 5000,
     "order": 21,
-    "img" : "images/i21.png"
+    "img" : "images/bouquets/i21.jpg"
   },
   "Красная луна": {
     "name": "Букет \"Красная луна\"",
     "cost": 5000,
     "order": 22,
-    "img" : "images/i22.png"
+    "img" : "images/bouquets/i22.jpg"
   },
   "Нарядная поляна": {
     "name": "Букет \"Нарядная поляна\"",
     "cost": 5000,
     "order": 23,
-    "img" : "images/i23.png"
+    "img" : "images/bouquets/i23.jpg"
   },
   "Собрание цветов": {
     "name": "Букет \"Собрание цветов\"",
     "cost": 5000,
     "order": 24,
-    "img" : "images/i24.png"
+    "img" : "images/bouquets/i24.jpg"
   },
   "Солнечный зайчик": {
     "name": "Букет \"Солнечный зайчик\"",
     "cost": 5000,
     "order": 25,
-    "img" : "images/i25.png"
+    "img" : "images/bouquets/i25.jpg"
   },
   "Фиолетовый закат": {
     "name": "Композиция \"Фи&shyолетовый закат\"",
     "cost": 5000,
     "order": 26,
-    "img" : "images/i26.png"
+    "img" : "images/bouquets/i26.jpg"
   },
   "Лучи добра": {
     "name": "Букет<br> \"Лучи добра\"",
     "cost": 5000,
     "order": 27,
-    "img" : "images/i27.png"
+    "img" : "images/bouquets/i27.jpg"
   },
   "Осенняя эстетика": {
     "name": "Букет \"Осенняя эстетика\"",
     "cost": 5000,
     "order": 28,
-    "img" : "images/i28.png"
+    "img" : "images/bouquets/i28.jpg"
   },
   "Сладкое послевкусие": {
     "name": "Букет \"Сладкое послевкусие\"",
     "cost": 5000,
     "order": 29,
-    "img" : "images/i29.png"
+    "img" : "images/bouquets/i29.jpg"
   },
   "Тот самый день": {
     "name": "Композиция \"Тот самый день\"",
     "cost": 5000,
     "order": 30,
-    "img" : "images/i30.png"
+    "img" : "images/bouquets/i30.jpg"
   },
   "Райское местечко": {
     "name": "Композиция \"Райс&shyкое местечко\"",
     "cost": 5000,
     "order": 31,
-    "img" : "images/i31.png"
+    "img" : "images/bouquets/i31.jpg"
   },
   "Летнее добро": {
     "name": "Букет \"Летнее добро\"",
     "cost": 5000,
     "order": 32,
-    "img" : "images/i32.png"
+    "img" : "images/bouquets/i32.jpg"
   },
   "Пинки лав": {
     "name": "Букет \"Пинки лав\"",
     "cost": 5000,
     "order": 33,
-    "img" : "images/i33.png"
+    "img" : "images/bouquets/i33.jpg"
   },
   "Кусочек тепла": {
     "name": "Букет \"Кусочек тепла\"",
     "cost": 5000,
     "order": 34,
-    "img" : "images/i34.png"
+    "img" : "images/bouquets/i34.jpg"
   },
   "Искра счастья": {
     "name": "Букет \"Искра счастья\"",
     "cost": 5000,
     "order": 35,
-    "img" : "images/i35.png"
+    "img" : "images/bouquets/i35.jpg"
   },
   "Рыжая осень": {
     "name": "Букет \"Рыжая осень\"",
     "cost": 5000,
     "order": 36,
-    "img" : "images/i36.png"
+    "img" : "images/bouquets/i36.jpg"
   },
   "Рыжая осеньТепло души": {
     "name": "Букет \"Тепло души\"",
     "cost": 5000,
     "order": 37,
-    "img" : "images/i37.png"
+    "img" : "images/bouquets/i37.jpg"
   },
   "Вдохновление": {
     "name": "Букет \"Вдохновление\"",
     "cost": 5000,
     "order": 38,
-    "img" : "images/i38.png"
+    "img" : "images/bouquets/i38.jpg"
   },
   "Теплые оттенки": {
     "name": "Букет \"Теплые оттенки\"",
     "cost": 5000,
     "order": 39,
-    "img" : "images/i39.png"
+    "img" : "images/bouquets/i39.jpg"
   },
   "Черный настрой": {
     "name": "Букет \"Черный настрой\"",
     "cost": 5000,
     "order": 40,
-    "img" : "images/i40.png"
+    "img" : "images/bouquets/i40.jpg"
   },
   "Счастливое время": {
     "name": "Композиция \"Счастливое время\"",
     "cost": 5000,
     "order": 41,
-    "img" : "images/i41.png"
+    "img" : "images/bouquets/i41.jpg"
   },
   "Розы в домике": {
     "name": "Композиция \"Розы в домике\"",
     "cost": 5000,
     "order": 42,
-    "img" : "images/i42.png"
+    "img" : "images/bouquets/i42.jpg"
   },
   "Открытка счастья": {
     "name": "Букет \"Открытка счастья\"",
     "cost": 5000,
     "order": 43,
-    "img" : "images/i43.png"
+    "img" : "images/bouquets/i43.jpg"
   },
   "Прекрасное утро": {
     "name": "Букет \"Прекрасное утро\"",
     "cost": 5000,
     "order": 44,
-    "img" : "images/i44.png"
+    "img" : "images/bouquets/i44.jpg"
   },
   "Любимой": {
     "name": "Композиция \"Любимой\"",
     "cost": 5000,
     "order": 45,
-    "img" : "images/i45.png"
+    "img" : "images/bouquets/i45.jpg"
   },
   "Частичка любви": {
     "name": "Букет \"Частичка любви\"",
     "cost": 5000,
     "order": 46,
-    "img" : "images/i46.png"
+    "img" : "images/bouquets/i46.jpg"
   },
   "Счастья подайте": {
     "name": "Букет \"Счастья подайте\"",
     "cost": 5000,
     "order": 47,
-    "img" : "images/i47.png"
+    "img" : "images/bouquets/i47.jpg"
   },
   "Забава": {
     "name": "Букет \"Забава\"",
     "cost": 5000,
     "order": 48,
-    "img" : "images/i48.png"
+    "img" : "images/bouquets/i48.jpg"
   },
   "Возвращение солнца": {
     "name": "Букет \"Возвращение солнца\"",
     "cost": 5000,
     "order": 48,
-    "img" : "images/i49.png"
+    "img" : "images/bouquets/i49.jpg"
   }
 }

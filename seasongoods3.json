@@ -3,18 +3,18 @@
     "name": "Букет \"Возвращение солнца\"",
     "cost": 5000,
     "order": 99991,
-    "img" : "images/i49.png"
+    "img" : "images/bouquets/i49.jpg"
   },
   "Забава": {
     "name": "Букет \"Забава\"",
     "cost": 5000,
     "order": 99992,
-    "img" : "images/i48.png"
+    "img" : "images/bouquets/i48.jpg"
   },
   "Прекрасное утро": {
     "name": "Букет \"Прекрасное утро\"",
     "cost": 5000,
     "order": 99993,
-    "img" : "images/i44.png"
+    "img" : "images/bouquets/i44.jpg"
   }
 }

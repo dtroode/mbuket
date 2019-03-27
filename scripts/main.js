@@ -69,7 +69,6 @@ function seasonGoodsTopOut(data) {
         out += '<img src="/' + data[key].img + '" class="square" alt="' + data[key].name + '" onclick="imageClick(this)">';
         out += '<p data-id="' + key + '">' + data[key].name + '</p>';
         out += '</a>';
-        console.log(data);
     }
     $('.nyi').append(out);
     $('.add-to-season-cart').on('click', addToSeasonCart);
@@ -233,7 +232,6 @@ $(document).ready(function() {
     seasonInit();
     seasonTopInit();
     logSeason();
-    seasonDate();
     loadCart();
     loadSeasonCart();
     showPolicyQuestion();
