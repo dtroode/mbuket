@@ -328,10 +328,6 @@ function sendEmail() {
     }
 }
 
-function sendEmailButton() {
-    $('.send-email').on('click', sendEmail);
-}
-
 function closeThanks() {
     $('.thanks').css({"display": "none"});
     $('.overlay').css({"display": "none"});

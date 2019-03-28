@@ -17,11 +17,11 @@
     <!--Google / Search Engine Tags-->
     <meta itemprop="name" content="Мастер Букет">
     <meta itemprop="description" content='Мастер Букет - студия дизайна и флористики'>
-    <meta itemprop="image" content="https://masterbuket.com/images/OG.webp">
+    <meta itemprop="image" content="https://masterbuket.com/images/png/OG.png">
 
     <!--Facebook Open Graph meta tags-->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://masterbuket.com/images/OG.webp" />
+    <meta property="og:image" content="https://masterbuket.com/images/png/OG.png" />
     <meta property="og:url" content="https://masterbuket.com">
     <meta property="og:title" content="Мастер Букет" />
     <meta property="og:description" content="Мастер Букет - студия дизайна и флористики" />
@@ -32,7 +32,7 @@
     <meta name="twitter:url" content="https://masterbuket.com">
     <meta name="twitter:title" content="Мастер Букет">
     <meta name="twitter:description" content="Мастер Букет - студия дизайна и флористики">
-    <meta name="twitter:image" content="https://masterbuket.com/images/OG.webp">
+    <meta name="twitter:image" content="https://masterbuket.com/images/png/OG.png">
 
     <!--Links-->
     <link rel="manifest" href="../manifest.json">
@@ -158,7 +158,7 @@
                             type="text" id="email" onclick="clearValue()"></p>
                     <p class="input-text"><span class="phone-text">Телефон: </span><br /><input type="tel" pattern="((\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}"
                             required value="+7" type="text" id="ephone" onclick="clearAndShowValue()"></p>
-                    <button class="send-email cart-func">Заказать</button>
+                    <button class="send-email cart-func" onclick="sendEmail()">Заказать</button>
                     <div class="thanks">
                         <svg onclick="closeThanks()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" /><!-- Code injected by live-server -->
@@ -215,6 +215,7 @@
                         <div class="alert-div-overlay"></div>
                         <h2 class="input">Заполните поля</h2>
                         <h2 class="retry">Повторите заказ</h2>
+                        <h2 class="cart">Корзина пуста</h2>
                         <svg onclick="closeAlert()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" /><!-- Code injected by live-server -->
                             <script type="text/javascript">
