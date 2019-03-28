@@ -42,6 +42,7 @@
     <link rel="prefetch" href="/images/jpg/cookieback.jpg" as="image">
     <link rel="prefetch" href="/images/jpg/cartback.jpg" as="image">
     <link rel="prefetch" href="/images/jpg/dottedback.jpg" as="image">
+    <link rel="preconnect" href="https://mc.yandex.ru">
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -53,9 +54,9 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
     <script src="/scripts/lazysizes.min.js" async></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/scripts/wow.min.js"></script>
     <script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js" integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA"
         crossorigin="anonymous"></script>
+    <script src="/scripts/wow.min.js"></script>
     <script src="/scripts/main.js"></script>
     <script src="/scripts/button.js"></script>
     <script src="/scripts/button.js"></script>
@@ -96,11 +97,11 @@
          </div>
      </div>
     <a href="/cart/#second" class="link-to-cart">
-        <p>В корзину</p><picture><source srcset="/images/webp/vase.webp"><img src="/images/png/vase.png" item="🏺"></picture>
+        <p>В корзину</p><img src="/images/png/vase.png" item="🏺">
     </a>
     <div class="cookie">
         <p>Мы используем куки</p>
-        <picture><source srcset="/images/webp/cookie.webp"><img src="/images/png/cookie.png" alt="🍪" class="emoji"></picture>
+        <img src="/images/png/cookie.png" alt="🍪" class="emoji">
         <p>Для улучшения сайта мы вынуждены использовать куки и другие технологии. <a href="/cookies">Читать больше...</a></p>
         <button onclick="closeCookie()" class="agree">Я согласен</button>
     </div>
@@ -177,15 +178,15 @@
                     <h1 class="biggy">Кто мы?</h1>
                 </div>
                 <h2>Кто мы?</h2>
-                <picture><source srcset="/images/webp/who-we.webp"><img src="/images/png/who-we.png" alt="🤨" class="emoji"></picture>
+                <img src="/images/png/who-we.png" alt="🤨" class="emoji">
                 <p class="who-we we wow fadeInUp">Наша студия состоит из небольшого количества работников, но зато
                     какие они профессионалы... Под вашу ситуацию и вкус подберем подходящую композицию или подарок и
                     упакуем все так, чтоб не стыдно было. Ну а подождать выполнения заказа вы можете на мягком диване
                     или прогулявшись по соседнему парку. Правда ждать долго не получится, мы справимся очень быстро. Но
                     мы также и доставляем в назначенное место и время.</p>
                 <div class="images">
-                    <picture><source srcset="/images/webp/fl1.webp"><img data-src="/images/jpg/fl1.jpg" alt="flower" class="square lazyload s1 wow fadeInUp"></picture>
-                    <picture><source srcset="/images/webp/fl2.webp"><img data-src="/images/jpg/fl2.jpg" alt="flower" class="square lazyload s2 wow fadeInUp"></picture>
+                    <img data-src="/images/jpg/studio1.jpg" alt="flower" class="square lazyload s1 wow fadeInUp">
+                    <img data-src="/images/jpg/studio2.jpg" alt="flower" class="square lazyload s2 wow fadeInUp">
                 </div>
                 <a class="link-to-product button wow fadeInUp" href="#product">
                     <p>Ассортимент</p>
@@ -201,10 +202,10 @@
                                     <h1 class="biggy hb">Почему мы?</h1>
                                 </div>
                                 <h2>Почему мы?</h2>
-                                <picture><source srcset="/images/webp/hmmm.webp"><img src="/images/png/hmmm.png" alt="🤔" class="emoji"></picture>
+                                <img src="/images/png/hmmm.png" alt="🤔" class="emoji">
                             </div>
                             <div class="video-div">
-                                <video poster="./images/webp/poster.webp" autoplay muted loop>
+                                <video poster="./images/webp/poster.webp" class="lazy" autoplay muted loop>
                                     <source src="./videos/video.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -216,7 +217,8 @@
                                 многие хотят побывать — в Европе, а конкретнее, в Голландии. Естественно наши работники
                                 не оставят вас без своей улыбки и позволят пронаблюдать за всем процессом выполнения
                                 заказа. Но если вам лень, то мы сами привезем букет (в пределах МКАДа).</p>
-                            <picture><source srcset="/images/webp/fl3.webp"><img data-src="/images/jpg/fl3.jpg" alt="flower" class="square lazyload s3 wow fadeInUp"></picture>
+                            <img data-src="/images/jpg/studio3.jpg" alt="flower" class="square lazyload s3 wow fadeInUp">
+                            <img data-src="/images/jpg/studio4.jpg" alt="flower" class="square lazyload s3 wow fadeInUp">
                         </div>
                         <div class="col-lg-12 clients why-div why-text wow fadeInUp">
                             <object class="quote" data="/images/quote.svg" type="image/svg+xml"></object>
@@ -231,7 +233,7 @@
                     <h1 class="biggy">Букеты</h1>
                 </div>
                 <h2>Букеты</h2>
-                <picture><source srcset="/images/webp/product.webp"><img src="/images/png/product.png" alt="😍" class="emoji margin"></picture>
+                <img src="/images/png/product.png" alt="😍" class="emoji margin">
                 <div class="container-fluid s2">
                     <div class="row goods-out">
                     </div>
@@ -242,7 +244,7 @@
                     <h1 class="biggy split"><span class="season-name"></span> букеты</h1>
                 </div>
                 <h2><span class="season-name"></span> букеты</h2>
-                <picture><source srcset="/images/webp/product.webp"><img src="/images/png/product.png" alt="😍" class="emoji margin"></picture>
+                <img src="/images/png/product.png" alt="😍" class="emoji margin">
                 <div class="container-fluid s2">
                     <div class="row season-goods-out">
                     </div>
@@ -254,11 +256,11 @@
 					<h1 class="biggy">Банкетные залы</h1>
 				</div>
 				<h2>Банкетные залы</h2>
-				<picture><source srcset="/images/webp/castle.webp"><img src="/images/png/castle.png" alt="🏰" class="emoji"></picture>
+				<img src="/images/png/castle.png" alt="🏰" class="emoji">
 				<div class="container-fluid s2">
 					<div class="row">
 						<div class="item-2">
-							<picture><source srcset="/images/webp/template.webp"><img src="/images/png/template.png" class="wow fadeInUp" alt="item-2"></picture>
+							<img src="/images/png/template.png" class="wow fadeInUp" alt="item-2">
 						</div>
 					</div>
 				</div>
@@ -273,7 +275,7 @@
                                     <h1 class="biggy">Социалочки?</h1>
                                 </div>
                                 <h2>Социалочки?</h2>
-                                <picture><source srcset="/images/webp/socials.webp"><img src="/images/png/socials.png" alt="😯" class="emoji"></picture>
+                                <img src="/images/png/socials.png" alt="😯" class="emoji">
                                 <p class="socials we wow fadeInUp">Не нашли, что искали? Тогда настало время напомнить
                                     вам про наш Инстаграм. Это кладовка, в которой найдутся самые разнообразные и
                                     странные букеты. *звук заворачивания букетов в обертку*.</p>
@@ -282,16 +284,16 @@
                                     <div class="container-fluid insta-photos-conatiner">
                                         <div class="row">
                                             <div class="col-lg-3 insta-photos-blocks">
-                                                <picture><source srcset="/images/webp/inst1.webp"><img src="/images/jpg/inst1.jpg" alt="" class="insta-photos"></picture>
+                                                <img data-src="/images/jpg/inst1.jpg" alt="" class="insta-photos lazyload">
                                             </div>
                                             <div class="col-lg-3 insta-photos-blocks">
-                                                <picture><source srcset="/images/webp/inst2.webp"><img src="/images/jpg/inst2.jpg" alt="" class="insta-photos"></picture>
+                                                <img data-src="/images/jpg/inst2.jpg" alt="" class="insta-photos lazyload">
                                             </div>
                                             <div class="col-lg-3 insta-photos-blocks">
-                                                <picture><source srcset="/images/webp/inst3.webp"><img src="/images/jpg/inst3.jpg" alt="" class="insta-photos"></picture>
+                                                <img data-src="/images/jpg/inst3.jpg" alt="" class="insta-photos lazyload">
                                             </div>
                                             <div class="col-lg-3 insta-photos-blocks">
-                                                <picture><source srcset="/images/webp/inst4.webp"><img src="/images/jpg/inst4.jpg" alt="" class="insta-photos"></picture>
+                                                <img data-src="/images/jpg/inst4.jpg" alt="" class="insta-photos lazyload">
                                             </div>
                                         </div>
                                     </div>
@@ -310,7 +312,7 @@
                                     <h1 class="biggy">Где мы?</h1>
                                 </div>
                                 <h2>Где мы?</h2>
-                                <picture><source srcset="/images/webp/where-we.webp"><img src="/images/png/where-we.png" alt="😎" class="emoji"></picture>
+                                <img src="/images/png/where-we.png" alt="😎" class="emoji">
                                 <p class="where-we we wow fadeInUp">И наконец мы готовы раскрыть вам тайну. Мы
                                     находимся в Центре Международной Торговли (ЦМТ) в относительной близости к центру
                                     Москвы. Все для того, чтобы вам было недалеко и приятно. Рядом есть парк "Красная
@@ -328,8 +330,8 @@
                                         <a class="link num" href="tel:+79853532322">+7 (985) 353 23 22</a>
                                     </p>
                                 </div>
-                                <div class="wtc inline wow fadeInUp"></div>
-                                <picture><source srcset="/images/webp/wtcmsk.webp" type="img/webp"><img src="/images/jpg/wtcmsc.jpg" alt="" class="inline wow fadeInUp"></picture>
+                                <img src="/images/jpg/wtcmsc.jpg" alt="" class="inline wow fadeInUp">
+                                <img src="/images/jpg/park.jpg" alt="" class="inline wow fadeInUp">
                             </div>
                         </div>
                         <div class="col-lg-12 map">

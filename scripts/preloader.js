@@ -1,5 +1,5 @@
 $('body').ready(function() {
-    let images = $('picture') + $('img');
+    let images = $('img');
     let imagesTotalCount = images.length;
     let imagesLoadedCount = 0;
     let preloader = $('#page-preloader');
@@ -13,7 +13,7 @@ $('body').ready(function() {
     
         if (imagesLoadedCount >= imagesTotalCount) {
             setTimeout(() => {
-                $('picture').ready(function() {
+                $('img').ready(function() {
                     if (!preloader.hasClass('preloader-done')) {
                         preloader.addClass('preloader-done');
                         $('html').css({"overflow-y": "scroll"})

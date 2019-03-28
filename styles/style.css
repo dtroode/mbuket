@@ -653,7 +653,7 @@ svg:hover {
 .button p {
     line-height: 50px;
 }
-.s1 {
+.s1, .s3 {
     margin-right: 25px;
 }
 .s3 {
@@ -697,7 +697,7 @@ svg:hover {
 .map-background {
     position: absolute;
     width: 100%;
-    background-image: url("/images/jpg/wtc.jpg");
+    background-image: url("/images/jpg/map.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -1211,7 +1211,7 @@ svg:hover {
         width: 90vw;
         height: 90vw;
     }
-    .s1 {
+    .s1, .s3 {
         margin: 0 0 5vw 0;
     }
     .s2 {
