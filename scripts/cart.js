@@ -23,7 +23,7 @@ function loadCart() {
         seasonCart = JSON.parse(getCookie('seasonCart'));
         showCart();
     } else {
-        $('.cart-place').html('<div class="big-div"><h1 class="biggy">Корзина пуста</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/png/cart-empty.png" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
+        $('.cart-place').html('<div class="big-div"><span class="biggy">Корзина пуста</span></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/png/cart-empty.png" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
         $('.total').css({"display": "none"});
         getCookie('cart');
         deleteCookie('cart');
@@ -60,7 +60,7 @@ function showCart() {
         $.getJSON('/goods.json', function(data) {
             var goods = data;
             var out = '';
-            out += '<div class="big-div"><h1 class="biggy">Корзина</h1></div><div class="zind"><h2>Корзина</h2><img class="emoji emb" src="/images/png/cart.png" alt="😉"></div>'
+            out += '<div class="big-div"><span class="biggy">Корзина</span></div><div class="zind"><h2>Корзина</h2><img class="emoji emb" src="/images/png/cart.png" alt="😉"></div>'
             for (var id in cart) {
                 out += '<div class="item">';
                 out += '<img src="/'+ goods[id].img +'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + goods[id].name + '">';
@@ -85,7 +85,7 @@ function showCart() {
         $.getJSON('/seasongoods.json', function(data) {
             var seasonGoods = data;
             var out = '';
-            out += '<div class="big-div"><h1 class="biggy"><span class="season-name">' + logSeason() + '</span> корзина</h1></div><div class="zind"><h2><span class="season-name">' + logSeason() + '</span> корзина</h2><img class="emoji emb" src="/images/png/cart.png" alt="😉"></div>'
+            out += '<div class="big-div"><span class="biggy"><span class="season-name">' + logSeason() + '</span> корзина</span></div><div class="zind"><h2><span class="season-name">' + logSeason() + '</span> корзина</h2><img class="emoji emb" src="/images/png/cart.png" alt="😉"></div>'
             for (var id in seasonCart) {
                 out += '<div class="item">';
                 out += '<img src="/'+seasonGoods[id].img +'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + seasonGoods[id].name + '">';
@@ -111,7 +111,7 @@ function showCart() {
         $.getJSON('/goods.json', function(data) {
             var goods = data;
             var out = '';
-            out += '<div class="big-div"><h1 class="biggy">Корзина</h1></div><div class="zind"><h2>Корзина</h2><img class="emoji emb" src="/images/png/cart.png" alt="😉"></div>'
+            out += '<div class="big-div"><span class="biggy">Корзина</span></div><div class="zind"><h2>Корзина</h2><img class="emoji emb" src="/images/png/cart.png" alt="😉"></div>'
             for (var id in cart) {
                 out += '<div class="item">';
                 out += '<img src="/'+ goods[id].img +'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + goods[id].name + '">';
@@ -137,7 +137,7 @@ function showCart() {
         $.getJSON('/seasongoods.json', function(data) {
             var seasonGoods = data;
             var out = '';
-            out += '<div class="big-div"><h1 class="biggy"><span class="season-name">' + logSeason() + '</span> корзина</h1></div><div class="zind"><h2><span class="season-name">' + logSeason() + '</span> корзина</h2><img class="emoji emb" src="/images/png/cart.png" alt="😉"></div>'
+            out += '<div class="big-div"><span class="biggy"><span class="season-name">' + logSeason() + '</span> корзина</span></div><div class="zind"><h2><span class="season-name">' + logSeason() + '</span> корзина</h2><img class="emoji emb" src="/images/png/cart.png" alt="😉"></div>'
             for (var id in seasonCart) {
                 out += '<div class="item">';
                 out += '<img src="/'+seasonGoods[id].img +'" class="wow fadeInUp image" onclick="imageClick(this)" alt="' + seasonGoods[id].name + '">';
@@ -160,7 +160,7 @@ function showCart() {
             $('.minus-season-goods').on('click', minusSeasonGoods);
         });
     } else {
-        $('.cart-place').html('<div class="big-div"><h1 class="biggy">Корзина пуста</h1></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/png/cart-empty.png" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
+        $('.cart-place').html('<div class="big-div"><span class="biggy">Корзина пуста</span></div><div class="zind"><h2>Корзина пуста</h2><img class="emoji" src="/images/png/cart-empty.png" alt="😮"><p class="empty-cart">Вы можете перейти <a class="nlink" href="https://masterbuket.com/#product">на главную страницу</a>, чтобы добавить товары в корзину</p></div>');
         $('.total').css({"display": "none"});
         deleteCookie('cart');
         deleteCookie('seasonCart');

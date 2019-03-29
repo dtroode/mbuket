@@ -81,7 +81,7 @@ function showLink() {
 }
 
 function showLinkImmediately() {
-    if (!isEmpty(cart) || !isEmpty(seasonCart)) {
+    if (!isEmpty(cart) && !isEmpty(seasonCart)) {
     } else {
         $('.link-to-cart').css({"display": "block", "opacity": "1", "bottom": "40px"});
         setTimeout(changeTransition, 1100);
@@ -122,16 +122,6 @@ function saveSeasonCart() {
     setCookie('seasonCart', JSON.stringify(seasonCart), '/')
 }
 
-function deleteCookie(name) {
-    var cookieDate = new Date();
-    cookieDate.setTime(cookieDate.getTime() - 1);
-    document.cookie = name += '=; expires=' + cookieDate.toGMTString();
-}
-
-function setCookie(name, value, path) {
-    document.cookie = name + '=' + escape(value) + ((path) ? "; path=" + path : "");
-}
-
 function loadCart() {
     if (getCookie('cart')) {
         cart = JSON.parse(getCookie('cart'));
@@ -141,59 +131,6 @@ function loadSeasonCart() {
     if (getCookie('seasonCart')) {
         seasonCart = JSON.parse(getCookie('seasonCart'));
     }
-}
-
-function getCookie(name) {
-    var cookie = ' ' + document.cookie;
-    var search = ' ' + name + '=';
-    var setStr = null;
-    var offset = 0;
-    var end = 0;
-    if (cookie.length > 0) {
-        offset = cookie.indexOf(search);
-        if (offset != -1) {
-            offset += search.length;
-            end = cookie.indexOf(';', offset)
-            if (end == -1) {
-                end = cookie.length;
-            }
-            setStr = unescape(cookie.substring(offset, end));
-        }
-    }
-    return(setStr);
-}
-
-function showPolicyQuestion() {
-    var policy = getCookie('policy');
-    if (policy == 'yes') {
-        $('.cookie').css({
-            "display": "none"
-        })
-    } else {
-        $('.cookie').css({
-            "display": "block"
-        })
-    }
-}
-
-function closeCookie() {
-    var windowWidth = $("body").width();
-    if (windowWidth <= 992) {
-        $('.cookie').css({
-            "opacity": "0"
-        })
-    } else {
-        $('.cookie').css({
-            "right": "-200px",
-            "box-shadow": "none"
-        });
-    }
-    setTimeout(() => {
-        $('.cookie').css({
-            "display": "none"
-        })
-    }, 500);
-    setCookie('policy', 'yes', '/');
 }
 
 function imageClick(e) {
@@ -222,9 +159,10 @@ function preventCloseImage(event) {
     event.stopPropagation();
 }
 function isEmpty(object) {
-    for (var key in object)
-    if (object.hasOwnProperty(key)) return true;
-    return false;
+    for (var key in object) {
+        if (object.hasOwnProperty(key)) return true;  
+        return false;
+    }
 }
 
 $(document).ready(function() {
@@ -234,6 +172,5 @@ $(document).ready(function() {
     logSeason();
     loadCart();
     loadSeasonCart();
-    showPolicyQuestion();
     showLinkImmediately();
 });

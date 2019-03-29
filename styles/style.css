@@ -43,7 +43,7 @@ a {
     color: var(--gray);
     text-decoration: none;
 }
-h1, h2, h3, button, a, p {
+h1, h2, h3, button, a, p, span {
     font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
     font-weight: 700;
 }
@@ -314,9 +314,14 @@ svg:hover {
 }
 .links {
     text-align: center;
+    top: 0;
+    position: absolute;
+    right: 0;
+    background-color: var(--white);
+    height: calc(100% + 20vh);
 }
 .links a {
-    line-height: 100vh;
+    line-height: 60vh;
 }
 .link-to-cart {
     -webkit-transition: all ease-out 1s;
@@ -428,41 +433,39 @@ svg:hover {
     margin: 0;
     color: var(--red);
 }
-.image-main {
-    background-image: url("/images/jpg/flower1.jpg");
-}
-.image-error {
-    background-image: url("/images/png/404back.png");
-}
-.image-cookies {
-    background-image: url("/images/jpg/cookieback.jpg");
-}
-.image-cart {
-    background-image: url("/images/jpg/cartback.jpg");
-}
-.image-div-2 {
-    background-image: url("/images/jpg/flower2.jpg");
-}
 .id {
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    z-index: 0;
+    object-fit: cover;
 }
 .full {
     padding: 0;
 }
-.perv, .image-div {
-    position: fixed;
+.prev, .image-div-1 {
     min-height: 100vh;
 }
-.image-div {
-    right: 33.33%;
+.perv {
+    position: fixed;
 }
-.links {
-    position: absolute;
+.image-div-1 {
+    right: 33.33%;
+    position: fixed;
+}
+.image-div-2 {
     right: 0;
-    z-index: 3;
+    position: fixed;
+    top: 0;
+    object-fit: cover;
+}
+.overlay-image-div-2 {
+    position: absolute;
+    height: 20vh;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    background-color: var(--red);
+}
+.overlay-image-div-2-main {
+    background-color: var(--white);
 }
 .main {
     width: 100vw;
@@ -471,7 +474,7 @@ svg:hover {
     padding-left: 20vw;
     padding-right: 20vw;
     margin-bottom: 40vh;
-    z-index: 2;
+    z-index: 4;
     color: var(--gray);
     min-height: 60vh;
 }
@@ -493,6 +496,7 @@ svg:hover {
     background-color: var(--pink);
     background-image: url("/images/png/seasonback.png");
     background-size: contain;
+    background-position-x: center;
     background-repeat: no-repeat;
 }
 .second {
@@ -615,13 +619,13 @@ svg:hover {
     width: 275px;
     height: 275px;
 }
-.newyear-items {
+.fresh-items {
     margin-bottom: 20px;
 }
-.newyear-items h2 {
+.fresh-items h2 {
     width: 500px;
 }
-.newyear-items .square {
+.fresh-items .square {
     width: 200px;
     height: 200px;
     border: 15px solid var(--gray);
@@ -632,7 +636,7 @@ svg:hover {
     user-select: unset;
     cursor: pointer;
 }
-.newyear-items .square:hover {
+.fresh-items .square:hover {
     border: 17.5px solid var(--gray);
 }
 .button {
@@ -1062,11 +1066,11 @@ svg:hover {
     .full, .full-cont {
         min-height: 100vh;
     }
-    .perv, .image-div, .links {
-        min-height: 100vh;
+    .links {
+        min-height: unset;
     }
-    .perv-main, .image-main, .links-main {
-        min-height: 150vh;
+    .main-links {
+        min-height: 100vh;
     }
 }
 @media screen and (max-width: 992px) {
@@ -1112,8 +1116,12 @@ svg:hover {
     .map h2 {
         margin-top: 50vh;
     }
-    .image-div {
+    .image-div-1 {
         background-attachment: scroll;
+    }
+    .image-div-2 {
+        position: static;
+        height: 100vh;
     }
     .main {
         position: static;
@@ -1147,16 +1155,17 @@ svg:hover {
         width: 90vw;
         height: 90vw;
     }
-    .newyear-items p {
+    .fresh-items p {
         font-size: 100%;
     }
-    .image-div {
+    .image-div-1 {
         display: none;
     }
     .links {
         min-height: 50vh;
         height: 50vh;
         position: static;
+        z-index: 2;
     }
     .links a {
         line-height: 50vh;
