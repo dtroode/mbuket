@@ -273,10 +273,12 @@ svg:hover {
 .arrow:hover {
     fill: var(--gray);
 }
-.clients {
-    background-image: url("/images/jpg/dottedback.jpg");
-    background-size: contain;
-    background-position: center center;
+.clients-bg, .season-product-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
 }
 .quote {
     width: 100px;
@@ -494,10 +496,6 @@ svg:hover {
 }
 .season-product {
     background-color: var(--pink);
-    background-image: url("/images/png/seasonback.png");
-    background-size: contain;
-    background-position-x: center;
-    background-repeat: no-repeat;
 }
 .second {
     padding: 80px;
@@ -684,7 +682,7 @@ svg:hover {
     padding: 0;
     background-color: var(--gray);
 }
-.map-container, .map-background, #map {
+.map-container, .map-bg, #map {
     height: 70vh;
 }
 .map-container {
@@ -695,43 +693,33 @@ svg:hover {
 .map-container:hover {
     opacity: 1;
 }
-.map-container:hover + h2 {
-    opacity: 0;
-}
-.map-background {
+.map-bg {
     position: absolute;
-    width: 100%;
-    background-image: url("/images/jpg/map.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
 }
 .map h2 {
     position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate3D(-50%, -50%, 0);
     text-align: center;
-    margin-top: 35vh;
-    transform: translateY(-50%);
     color: var(--pink);
-    z-index: 2;
+    z-index: 3;
 }
 .blur {
-    background-image: url("/images/jpg/wtcblur.jpg");
     position: relative;
     z-index: 2;
     width: 610px;
     height: 300px;
     border: 20px solid var(--gray);
     padding: 25px 15px;
+    overflow: hidden;
 }
-.wtc {
-    background-image: url("/images/jpg/wtc.jpg");
-}
-.blur, .wtc {
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.blur-bg {
+    position: absolute;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 .inline {
     position: relative;
@@ -1060,6 +1048,9 @@ svg:hover {
 #map a {
     font-size: unset;
 }
+#map:hover + h2 {
+    opacity: 0;
+}
 
 /* ------------MEDIA ADAPTATION------------ */
 @media screen and (max-height: 1800px) {
@@ -1112,9 +1103,6 @@ svg:hover {
         left: 0;
         transform: translateY(0);
         width: unset;
-    }
-    .map h2 {
-        margin-top: 50vh;
     }
     .image-div-1 {
         background-attachment: scroll;
@@ -1219,11 +1207,11 @@ svg:hover {
         position: static;
         height: 100vh;
     }
-    .map-container, .map-background, #map {
+    .map-container, .map-bg, #map {
         height: 100vh;
     }
-    .map-background {
-        background-attachment: scroll;
+    .map-bg {
+        position: static;
     }
     .blur {
         background-size: unset;
