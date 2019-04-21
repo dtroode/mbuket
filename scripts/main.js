@@ -3,6 +3,8 @@ var seasonCart = {};
 var todayDate = new Date();
 var todayMonth = todayDate.getMonth()+1;
 
+
+
 function logSeason() {
     var todayBouquets = '';
     if (todayMonth == 12 || todayMonth <= 2) {
@@ -142,6 +144,7 @@ function imageClick(e) {
         "<div class='popup_bg'>" +
         "<img src='" + src + "' class='popup_img'>" +
         "<div class='popup_description'><h3>" + name + "</h3><button class='add-to-cart cart-func wow fadeInUp' onclick='showLink()' data-id='" + button + "'>Добавить в корзину</button></div></div></div>");
+    $("html").css({"overflow-y": "hidden"});
     $(".popup").fadeIn(200);
     $(".popup_bg").on('click', closeImage);
     $(".popup_description").on('click', preventCloseImage);
@@ -153,11 +156,13 @@ function closeImage() {
     setTimeout(function() {
         $(".popup").remove();
     }, 800);
+    $("html").css({"overflow-y": "scroll"});
 }
 
 function preventCloseImage(event) {
     event.stopPropagation();
 }
+
 function isEmpty(object) {
     for (var key in object) {
         if (object.hasOwnProperty(key)) return true;  

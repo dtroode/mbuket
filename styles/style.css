@@ -32,13 +32,6 @@
 html {
     overflow-x: hidden;
 }
-body::-webkit-scrollbar {
-    width: 0.5em;
-    background-color: #E2E2E2;
-}
-body::-webkit-scrollbar-thumb {
-    background-color: var(--gray);
-}
 a {
     color: var(--gray);
     text-decoration: none;
@@ -81,9 +74,6 @@ a {
 }
 a:hover {
     color: var(--red);
-}
-a:visited {
-    color: inherit;
 }
 p, p a {
     font-size: 100%;
@@ -662,6 +652,8 @@ svg:hover {
     border: 20px solid var(--red);
 }
 .emoji {
+    position: relative;
+    z-index: 2;
     width: 50px;
     height: 50px;
     display: block;
@@ -692,6 +684,10 @@ svg:hover {
 }
 .map-container:hover {
     opacity: 1;
+}
+.main-content {
+    position: relative;
+    z-index: 2;
 }
 .map-bg {
     position: absolute;
@@ -1069,15 +1065,8 @@ svg:hover {
         background-attachment: scroll;
     }
     html, body {
-        overflow-x: hidden;
+        overflow: hidden;
         width: 100%;
-    }
-    body::-webkit-scrollbar {
-        width: none;
-        background-color: unset;
-    }
-    body::-webkit-scrollbar-thumb {
-        background-color: unset;
     }
     h1 {
         display: block;
@@ -1229,10 +1218,16 @@ svg:hover {
     .blur, .inline {
         background-attachment: scroll;
     }
+    .blur-bg {
+        height: 100%;
+        width: auto;
+    }
     .contact-info {
-        position: static;
+        position: relative;
         font-size: 125%;
         margin: 0;
+        left: 0;
+        right: 0;
     }
     .video-div {
         display: none;
@@ -1270,7 +1265,7 @@ svg:hover {
     .name {
         width: 100%;
     }
-    .biggy {
+    .big-div {
         display: none;
     }
     .link-to-cart {
