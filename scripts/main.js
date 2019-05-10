@@ -69,7 +69,7 @@ function seasonGoodsTopOut(data) {
         name = '';
         out += '<a href="#season" class="scroll-to-season">';
         out += '<img src="/' + data[key].img + '" class="square" alt="' + data[key].name + '" onclick="imageClick(this)">';
-        out += '<p data-id="' + key + '">' + data[key].name + '</p>';
+        out += '<span data-id="' + key + '">' + data[key].name + '</span>';
         out += '</a>';
     }
     $('.nyi').append(out);
@@ -141,13 +141,13 @@ function imageClick(e) {
     var name = $(e).next().text();
     var button = $(e).next().next().attr('data-id');
     $("body").append("<div class='popup'>" +
-        "<div class='popup_bg'>" +
-        "<img src='" + src + "' class='popup_img'>" +
-        "<div class='popup_description'><h3>" + name + "</h3><button class='add-to-cart cart-func wow fadeInUp' onclick='showLink()' data-id='" + button + "'>Добавить в корзину</button></div></div></div>");
+        "<div class='popup-bg'>" +
+        "<img src='" + src + "' class='popup-img'>" +
+        "<div class='popup-description'><h3>" + name + "</h3><button class='add-to-cart cart-func wow fadeInUp' onclick='showLink()' data-id='" + button + "'>Добавить в корзину</button></div></div></div>");
     $("html").css({"overflow-y": "hidden"});
     $(".popup").fadeIn(200);
-    $(".popup_bg").on('click', closeImage);
-    $(".popup_description").on('click', preventCloseImage);
+    $(".popup-bg").on('click', closeImage);
+    $(".popup-description").on('click', preventCloseImage);
     $(".add-to-cart").on('click', addToCart);
 }
 

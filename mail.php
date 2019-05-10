@@ -24,7 +24,7 @@ $message .='Всего: '.$sum;
 $message .= '</p>';
 $message .= '</div></body></html>';
 
-$to = 'davidkis113@gmail.com'.',';
+$to = 'example@e.mail'.',';
 $to .=$_POST['email'];
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";

@@ -241,12 +241,13 @@ function imageClick(e) {
     var name = $(e).next().text();
     var button = $(e).next().next().next().children().attr('data-id');
     $("body").append("<div class='popup'>" +
-        "<div class='popup_bg'>" +
-        "<img src='" + src + "' class='popup_img'>" +
-        "<div class='popup_description'><h3>" + name + "</h3><button data-id='" + button + "' class='del-goods remove-fr-cart cart-func'>Удалить из корзины</button></div></div></div>");
+        "<div class='popup-bg'>" +
+        "<img src='" + src + "' class='popup-img'>" +
+        "<div class='popup-description'><h3>" + name + "</h3><button data-id='" + button + "' class='del-goods remove-fr-cart cart-func'>Удалить из корзины</button></div></div></div>");
+    $("html").css({"overflow-y": "hidden"});
     $(".popup").fadeIn(200);
-    $('.popup_bg').on('click', closeImage);
-    $(".popup_description").on('click', preventCloseImage);
+    $('.popup-bg').on('click', closeImage);
+    $(".popup-description").on('click', preventCloseImage);
     $(".del-goods").on('click', deleteGoods);
 }
 
@@ -255,6 +256,7 @@ function closeImage() {
     setTimeout(function() {
         $(".popup").remove();
     }, 800);
+    $("html").css({"overflow-y": "scroll"});
 }
 
 function preventCloseImage(event) {
@@ -267,17 +269,24 @@ function isEmpty(object) {
     return false;
 }
 
-function clearValue() {
-    $('.mail-text').html('Email:');
+function clearValue(i) {
+    id = i.id;
+    if (id == 'email') {  
+        $('.mail-text').html('Email:');
+        $('.send-text').html('');
+    } else {
+        $('.send-text').html('');
+    }
 }
 
-function clearAndShowValue() {
+function clearAndShowValue(i) {
     $('.phone-text').html('Телефон:');
-    var phones = { "mask": "## (###) ###-##-##"};
+    var phones = { "mask": "+# (###) ###-##-##"};
     $('#ephone').inputmask({ 
         mask: phones, 
         greedy: false, 
-        definitions: { '#': { validator: "[+0-9]", cardinality: 1} } });
+        definitions: { '#': { validator: "[0-9]", cardinality: 1} } });
+    clearValue(i);
 }
 
 function sendEmail() {
@@ -287,9 +296,7 @@ function sendEmail() {
     var emailPattern = /[0-9A-Za-z_-]+@[0-9A-Za-z_-]+\.[A-Za-zА-Яa-я]{2,5}/i;
     var phonePattern = /((\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}/i;
     if (ename == '' || email == '' || ephone == '') {
-        $('.alert-div').css({"display": "block"});
-        $('.input').css({"display": "block"});
-        $('.overlay').css({"display": "block"});
+        $('.send-text').html('Заполните поля');
     } else if (emailPattern.test(email) == false) {
         $('.mail-text').html('Email введен неверно');
     } else if (phonePattern.test(ephone) == false) {
@@ -308,39 +315,25 @@ function sendEmail() {
                     if (data == 1) {
                         $('.thanks').css({"display": "block"});
                         $('.overlay').css({"display": "block"});
+                        $('html').css({"oveflow-y": "hidden"});
                         deleteCookie('cart');
                     } else {
-                        $('.alert-div').css({"display": "block"});
-                        $('.retry').css({"display": "block"});
-                        $('.overlay').css({"display": "block"});;
+                        $('.send-text').html('Повторите заказ');
                     }
                 }
             );
         } else {
-            $('.alert-div').css({"display": "block"});
-            $('.cart').css({"display": "block"});
-            $('.overlay').css({"display": "block"});
+            $('.send-text').html('Корзина пуста');
         }
     } else {
-        $('.alert-div').css({"display": "block"});
-        $('.retry').css({"display": "block"});
-        $('.overlay').css({"display": "block"});
+        $('.send-text').html('Повторите заказ');
     }
 }
 
 function closeThanks() {
     $('.thanks').css({"display": "none"});
     $('.overlay').css({"display": "none"});
-}
-
-function closeAlert() {
-    $('.alert-div').css({"display": "none"});
-    $('.overlay').css({"display": "none"});
-    $('.mail').css({"display": "none"});
-    $('.input').css({"display": "none"});
-    $('.cart').css({"display": "none"});
-    $('.numbers').css({"display": "none"});
-    $('.retry').css({"display": "none"});
+    $('html').css({"oveflow-y": "scroll"});
 }
 
 $(document).ready(function() {
